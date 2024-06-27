@@ -1,0 +1,212 @@
+.longevity-head {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    margin-bottom: 70px
+}
+.longevity-page h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 0
+}
+.logevity-table-box {
+    position: relative;
+    z-index: 1;
+    background: #eee;
+    padding: 0
+}
+.logevity-table-box.skew-before:before {
+    top: -5vw;
+    height: 400px;
+    z-index: -1
+}
+.logevity-table-box .table td,
+.logevity-table-box .table th {
+    border-right: none;
+    border-top: none;
+}
+.logevity-table-box .table th:nth-child(1) {
+    width: 50%;
+}
+.logevity-table-box .table th:nth-child(3) {
+    width: calc(50% - 23px);
+}
+.logevity-table-box .table th:nth-child(2) {
+    width: 23px;
+    padding: 0;
+    background-color: #ffffff;
+    border: none;
+}
+.logevity-table-box .table thead {
+    background: #04386f
+}
+.logevity-table-box .table th {
+    font-size: 24px;
+    font-weight: lighter;
+    color: #fff
+}
+.logevity-table-box .table td {
+    font-size: 16px;
+    font-weight: 700
+}
+.logevity-table-box .table td:nth-child(2) {
+    color: #f56323
+}
+.logevity-table-box .table td:last-child,
+.logevity-table-box .table th:last-child {
+    border-right: none
+}
+.logevity-table-box .table thead th  {
+    padding: 20px 5px 12px 5px;
+    text-align: center;
+    vertical-align: top
+}
+.logevity-table-box .table tbody td:nth-child(3) {
+    color: #f56323
+}
+.logevity-table-box .table tbody td  {
+    text-align: center;
+    padding: 15px 20px;
+    line-height: 20px;
+    z-index: 2;
+    position: relative
+}
+.logevity-table-box .table tbody {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.logevity-table-box .table {
+    position: relative;
+}
+.logevity-table-box .table:before {
+    position: absolute;
+    display: block;
+    width: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.logevity-table-box .table:after {
+    position: absolute;
+    display: block;
+    width: calc(50% - 23px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+}
+.logevity-table-box .table tbody tr:nth-of-type(odd) {
+    background-color: #e7e7e7
+}
+.logevity-table-box .table tbody tr:nth-of-type(even) {
+    background-color: #fff
+}
+.logevity-table-box .table td:nth-child(2) {
+    padding: 0;
+}
+.logevity-table-box .table td:nth-child(2) {
+    color: #f56323;
+}
+.longevity-page .closing-text {
+    background: #eee;
+    color: #2f2f2f;
+    padding: 15px 0 50px 0
+}
+.longevity-page .closing-text a {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 1921px) {
+    .longevity-page .logevity-table-box.skew-before:before {
+        top: -2vw;
+    }
+    #longevityTable {
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .longevity-page .page-breadcrumbs,
+    .logevity-table-box.skew-before:before,
+    .logevity-table-box .table:after,
+    .logevity-table-box .table thead {
+        display: none
+    }
+    .longevity-head {
+        margin-top: 45px;
+        margin-bottom: 0
+    }
+    .longevity-head h1 {
+        font-size: 24px;
+        font-weight: 700
+    }
+    .logevity-table-box {
+        background: #ffffff;
+        padding: 35px 0 0 0
+    }
+    .logevity-table-box .container {
+        padding: 0 !important
+    }
+    .longevity-page .content-box {
+        padding: 0 30px 50px
+    }
+    .logevity-table-box .table {
+        border: 0;
+        margin: 15% 0 0
+    }
+    .logevity-table-box .table tr:nth-of-type(odd) {
+        background-color: transparent
+    }
+    .logevity-table-box .table tr:nth-of-type(even) {
+        background-color: #fff
+    }
+    .logevity-table-box .table tr {
+        display: table;
+        width: 100%
+    }
+    .logevity-table-box .table tbody {
+        box-shadow: none
+    }
+    .logevity-table-box .table tbody td {
+        border-right: none;
+        padding: 0
+    }
+    .logevity-table-box .table td:first-child {
+        width: 80%;
+        font-size: 16px;
+        font-weight: 700
+    }
+    .logevity-table-box .table td:first-child span {
+        display: block;
+        padding: 40px 17px 34px 17px;
+        text-align: left
+    }
+    .logevity-table-box .table td:last-child span {
+        padding: 40px 25px 34px 17px;
+        display: block
+    }
+    .logevity-table-box .table td:nth-child(2) span {
+        padding: 10px 0 15px;
+        display: block
+    }
+    .logevity-table-box .table th:nth-child(2) {
+        width: 0
+    }
+    .logevity-table-box .table:before {
+        background-color: #e7e7e7;
+        height: 86px;
+        top: -41px;
+        bottom: auto;
+        width: 105%;
+        box-shadow: none;
+        transform: skew(2deg, 5deg);
+        -webkit-transform: skew(2deg, 5deg);
+        z-index: 1
+    }
+    .longevity-page .closing-text {
+        padding: 45px 15px 100px
+    }
+}

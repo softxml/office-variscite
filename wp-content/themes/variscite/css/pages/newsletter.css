@@ -1,0 +1,103 @@
+.newsletter-page {
+
+}
+.newsletter-page .body-container {
+    background-color: #f6f6f6;
+    position: relative;
+}
+.newsletter-page .body-container:before {
+    content: '';
+    background: url("../../images/newsletter-page-bg.png") no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 240px;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 0;
+}
+.newsletter-page .page-breadcrumbs {
+    display: none;
+}
+.newsletter-page .page-box .container {
+    background-color: #fff;
+    margin-top: 120px;
+    padding: 55px 70px 60px;
+    position: relative;
+    width: 654px;
+    z-index: 1;
+}
+.newsletter-page h1 {
+    color: #0d0d0d;
+    font: 700 35px/1.2 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0 0 20px;
+}
+.newsletter-page .container > p {
+    color: #0d0d0d;
+    font-weight: 500;
+    margin: 0 0 50px;
+}
+.page-box .newsletter-form .privacy-wrapper,
+.page-box .newsletter-form .privacy-wrapper label {
+    font-style: normal;
+}
+.page-box .newsletter-form .privacy-wrapper span,
+.page-box .newsletter-form-wrapper .thank-you-message,
+.page-box .newsletter-form .newsletter-response.is-invalid span {
+    color: #0d0d0d;
+}
+.page-box .newsletter-form .privacy-wrapper a {
+    color: #0d0d0d;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.page-box .newsletter-form .privacy-wrapper a:hover {
+    text-decoration: none;
+}
+.privacy-policy-nl .privacy-wrapper {
+    width: 100%;
+}
+.newsletter-form .privacy-policy-nl  .privacy-wrapper span {
+    display: initial;
+}
+.privacy-policy-nl .submit-wrapper {
+    width: 100%;
+}
+p.privacy-consent-more-info {
+    font-size: 12px;
+    line-height: 1.3;
+}
+.newsletter-form input[name='firstname'] {
+    margin-right: 10px;
+}
+.privacy-policy-ty {
+    color: #ef6133 !important;
+}
+
+@media (max-width: 991px) {
+    .page-box .newsletter-form input[type=submit] {
+        margin-bottom: 0 !important;
+    }
+    .newsletter-form .privacy-wrapper label {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .newsletter-page .body-container {
+        background-color: #fff;
+    }
+    .newsletter-page .body-container:before {
+        top: 0;
+    }
+    .newsletter-page h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 560px) {
+    .newsletter-page .page-box .container {
+        padding: 40px 25px 0;
+    }
+}

@@ -1,0 +1,13 @@
+.webinar-page .sitBuilderTextWidget .text-box a {
+    color: #337ab7 !important;
+    text-decoration: underline !important;
+}
+
+.webinar-page .sitBuilderTextWidget .text-box a:hover {
+    color: #337ab7 !important;
+    text-decoration: none !important;
+}
+
+.webinar-page .sitBuilderTextWidget .text-box strong {
+    font-weight: 700;
+}

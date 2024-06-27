@@ -1,0 +1,393 @@
+#page-compare-wrap .compare-table-box .compare-table thead .thumb img {
+    max-height: 100px
+}
+#page-compare-wrap {
+    padding-top: 100px
+}
+#page-compare-wrap .title-box {
+    line-height: 65px;
+    margin: 0 0 80px
+}
+#page-compare-wrap .title-box h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 0
+}
+#page-compare-wrap .dlxls-box {
+    text-align: right
+}
+#page-compare-wrap #dlXls {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    color: #dc581e
+}
+#page-compare-wrap #dlXls:before {
+    content: " ";
+    background: url(../../images/files/xls.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -18px;
+    top: 4px
+}
+#page-compare-wrap .products-nav {
+    width: calc(100% - 280px);
+    float: right;
+    position: relative;
+    z-index: 10
+}
+#page-compare-wrap .products-nav .affix-top {
+    z-index: 200;
+    position: absolute;
+    width: 105%;
+    top: 90px;
+    margin-left: -20px
+}
+#page-compare-wrap .products-nav .affix {
+    top: 150px;
+    z-index: 200;
+    width: calc(1450px - 280px);
+    margin-left: -25px
+}
+#page-compare-wrap .products-nav ul li:last-child {
+    float: right
+}
+#page-compare-wrap .views-list li span {
+    background: #4a4a4a;
+    color: #fff;
+    font-size: 15px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0
+}
+#page-compare-wrap .views-list li span.active {
+    background: #f15322;
+    color: #fff
+}
+#page-compare-wrap .compare-table-wrap {
+    z-index: 2;
+    position: relative
+}
+#page-compare-wrap .compare-table-box {
+    overflow: hidden;
+    position: relative;
+    width: 1450px
+}
+#page-compare-wrap .compare-table-box > thead th {
+    height: 255px;
+    padding-bottom: 10px !important
+}
+#page-compare-wrap .compare-table-box > tbody td, #page-compare-wrap .compare-table-box > thead th {
+    width: 295px;
+    display: inline-block;
+    padding: 0;
+    border-top: none
+}
+#page-compare-wrap .compare-table-box .addProducts {
+    text-align: center
+}
+#page-compare-wrap .compare-table-box .addProducts a {
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    vertical-align: top;
+    width: 80%;
+    height: 90%;
+    padding: 90px 0 80px;
+    border: 1px solid #979797;
+    color: #0d0d0d;
+    text-decoration: none
+}
+#page-compare-wrap .compare-table-box .addProducts .fa {
+    display: block;
+    font-size: 38px
+}
+#page-compare-wrap .compare-table-box .compare-table {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap
+}
+#page-compare-wrap .compare-table-box .compare-table thead {
+    border-bottom: 30px solid #fff
+}
+#page-compare-wrap .compare-table-box .compare-table thead.affix {
+    background: #fff;
+    position: fixed !important;
+    top: 80px;
+    width: 1450px;
+    overflow: hidden;
+    padding-top: 10px
+}
+#page-compare-wrap .compare-table-box .compare-table thead.affix th {
+    height: auto
+}
+/*#page-compare-wrap .compare-table-box .compare-table thead.affix .thumb {*/
+/*    display: none*/
+/*}*/
+#page-compare-wrap .compare-table-box .compare-table thead.affix .addProducts a {
+    height: 40%;
+    padding: 9% 0
+}
+#page-compare-wrap .compare-table-box .compare-table thead .innner-box {
+    min-width: 295px;
+    width: 295px;
+    max-width: 295px;
+    display: inline-block;
+    padding: 0 45px 0 32px
+}
+#page-compare-wrap .compare-table-box .compare-table thead .innner-box .title {
+    margin-bottom: 16px;
+    white-space: initial;
+    min-height: 45px;
+    font-size: 15px
+}
+#page-compare-wrap .compare-table-box .compare-table thead .innner-box .actions .btn-warning {
+    font-size: 14px;
+    line-height: 18px;
+    height: 27px
+}
+#page-compare-wrap .compare-table-box .compare-table thead .innner-box .actions .btn-warning img {
+    margin: -3px 0 0 10px
+}
+#page-compare-wrap .compare-table-box .compare-table thead th {
+    width: 295px;
+    display: inline-block;
+    line-height: 24px;
+    padding: 0
+}
+#page-compare-wrap .compare-table-box .compare-table tbody tr {
+    display: flex
+}
+#page-compare-wrap .compare-table-box .compare-table tbody td, #page-compare-wrap .compare-table-box .compare-table tbody th {
+    width: 295px;
+    min-height: 50px;
+    line-height: 24px;
+    padding: 13px 45px;
+    white-space: initial
+}
+#page-compare-wrap .compare-table-box .compare-table tbody th {
+    color: #fff;
+    background-color: #4A4A4A
+}
+#page-compare-wrap .compare-table-box .compare-table tbody th:not(.active):not(:first-child),
+#page-compare-wrap .compare-table-box .compare-table tbody td:not(.active):not(:first-child),
+#page-compare-wrap .compare-table-box .compare-table thead th:not(.active):not(:first-child) {
+    display: none;
+}
+#page-compare-wrap .compare-table-box .compare-table tbody th:first-child,
+#page-compare-wrap .compare-table-box .compare-table tbody td:first-child,
+#page-compare-wrap .compare-table-box .compare-table thead th:first-child {
+    display: inline-block;
+}
+#page-compare-wrap .compare-table-box .compare-table tbody tr td {
+    background-color: #fff
+}
+#page-compare-wrap .compare-table-box .compare-table tbody tr:nth-child(even) td:nth-child(odd) {
+    background-color: #e5e5e5
+}
+#page-compare-wrap .compare-table-box .compare-table tbody tr:nth-child(even) td:nth-child(even) {
+    background-color: #f0f0f0
+}
+#page-compare-wrap .noProductsHelper .npc-title {
+    padding-left: 50px;
+    font-size: 30px
+}
+#page-compare-wrap .noProductsHelper .npc-subtitle {
+    padding-left: 50px;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #f56323;
+    letter-spacing: .1px;
+    font-weight: 600
+}
+.logged-in #page-compare-wrap .compare-table-box .compare-table thead.affix {
+    top: 110px
+}
+
+
+[lang=de-DE] #page-compare-wrap .compare-table-box .compare-table thead .innner-box {
+    min-width: 342px
+}
+
+
+@media (max-width: 1475px) and (min-width: 768px){
+    #page-compare-wrap .products-nav .affix,
+    #page-compare-wrap .products-nav {
+        width: 80%;
+    }
+    #page-compare-wrap .products-nav .affix {
+        margin: 0;
+    }
+    #page-compare-wrap .products-nav .affix-top {
+        position: inherit;
+        margin: 0;
+        width: 100%;
+    }
+    #page-compare-wrap .products-nav .affix-top .compare-prev {position: absolute;left:-25px; top: 50%;}
+    #page-compare-wrap .products-nav .affix-top .compare-next {position: absolute;right:-15px; top: 50%;}
+    #page-compare-wrap .products-nav .affix .compare-prev {margin-left: -20px;}
+    #page-compare-wrap .products-nav .affix .compare-next {margin-right: 10px;}
+    #page-compare-wrap .compare-table-box .compare-table thead.affix {
+        width: calc(100% - 30px);
+    }
+    #page-compare-wrap .compare-table-box {
+        width: 100%;
+    }
+    #page-compare-wrap .compare-table-box .compare-table tbody tr,
+    #page-compare-wrap .compare-table-box .compare-table thead tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #page-compare-wrap .compare-table-box .compare-table thead th,
+    #page-compare-wrap .compare-table-box .compare-table tbody td, 
+    #page-compare-wrap .compare-table-box .compare-table tbody th {
+        width: 20%;
+    }
+    #page-compare-wrap .compare-table-box .compare-table thead .innner-box {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #page-compare-wrap .compare-table-box .compare-table tbody td:first-child,
+    #page-compare-wrap .compare-table-box .compare-table tbody th:first-child, 
+    #page-compare-wrap .compare-table-box .compare-table thead th:first-child {
+        width: 20%;
+    }
+
+    #page-compare-wrap .compare-table-box .compare-table thead .innner-box .actions div {
+        width: 100%;
+    } 
+}
+/* @media (max-width: 768px ) {
+    #page-compare-wrap .views-list,
+    #page-compare-wrap .products-nav {
+        display: none;
+    }
+    #page-compare-wrap .compare-table-box {
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+        overflow: scroll;
+    }
+    #page-compare-wrap .compare-table-box .compare-table thead.affix {
+        position: inherit !important;
+    }
+    #page-compare-wrap .compare-table-box .compare-table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    } 
+    #page-compare-wrap .compare-table-box .compare-table tbody tr, 
+    #page-compare-wrap .compare-table-box .compare-table thead tr {
+     flex-wrap: inherit;
+    }
+    #page-compare-wrap .compare-table-box .compare-table tbody th:not(.active):not(:first-child), 
+    #page-compare-wrap .compare-table-box .compare-table tbody td:not(.active):not(:first-child), 
+    #page-compare-wrap .compare-table-box .compare-table thead th:not(.active):not(:first-child){
+        display: inline-block;
+    }
+    #page-compare-wrap .compare-table-box .compare-table tbody td:first-child, 
+    #page-compare-wrap .compare-table-box .compare-table tbody th:first-child, 
+    #page-compare-wrap .compare-table-box .compare-table thead th:first-child {
+        width: 150px;
+    }
+    #page-compare-wrap .compare-table-box .compare-table thead th, 
+    #page-compare-wrap .compare-table-box .compare-table tbody td, 
+    #page-compare-wrap .compare-table-box .compare-table tbody th {
+        width: 250px;
+        display: inline-block;
+    }
+    
+} */
+@media (min-width: 768px) {
+    #page-compare-wrap .title-box .col-md-2 {
+        text-align: right
+    }
+}
+
+
+@media (max-width: 767px) {
+    #page-compare-wrap .views-list {
+        display: none
+    }
+    #page-compare-wrap {
+        padding-top: 30px
+    }
+    #page-compare-wrap .container-table-wrap {
+        padding-right: 0;
+        padding-left: 0
+    }
+    #page-compare-wrap .title-box {
+        margin: 0;
+        margin-bottom: 10px !important
+    }
+    #page-compare-wrap .title-box h1 {
+        font-size: 24px;
+        font-weight: 700
+    }
+    #page-compare-wrap #dlXls {
+        padding-left: 30px
+    }
+    #page-compare-wrap #dlXls:before {
+        left: 2px
+    }
+    #page-compare-wrap .addProducts a {
+        padding: 65px 0 !important;
+        margin: 5px auto 0
+    }
+    #page-compare-wrap .compare-table-box {
+        padding-top: 30px
+    }
+    #page-compare-wrap .compare-table-box .compare-table.npc-table .addProducts a {
+        padding: 35px 0 !important
+    }
+    #page-compare-wrap .compare-table-box .compare-table.npc-table tbody {
+        margin-top: 145px
+    }
+    #page-compare-wrap .compare-table-box .compare-table.npc-table .noProductsHelper .npc-title {
+        padding-left: 0;
+        font-size: 20px;
+        letter-spacing: -.7px
+    }
+    #page-compare-wrap .compare-table-box .compare-table.npc-table .noProductsHelper .npc-subtitle {
+        padding-left: 0;
+        font-size: 14px
+    }
+    #page-compare-wrap .compare-table thead.affix-top {
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+    #page-compare-wrap .compare-table thead.affix {
+        top: 0 !important;
+        padding: 20px 0 0;
+        border-bottom: 20px solid #fff
+    }
+    #page-compare-wrap .compare-table thead.affix .addProducts a {
+        padding: 20px 0 !important;
+        margin: 0 auto !important
+    }
+    #page-compare-wrap .compare-table tbody {
+        margin-top: 225px;
+        display: block
+    }
+    #page-compare-wrap .compare-table tbody td, #page-compare-wrap .compare-table thead th {
+        width: 55vw !important
+    }
+    #page-compare-wrap .compare-table .innner-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 0 15px !important
+    }
+    #page-compare-wrap .compare-table tbody td:first-child, #page-compare-wrap .compare-table tbody th:first-child, #page-compare-wrap .compare-table thead th:first-child {
+        width: 45vw !important
+    }
+    #page-compare-wrap .compare-table tbody td, #page-compare-wrap .compare-table tbody th {
+        padding: 20px !important
+    }
+}

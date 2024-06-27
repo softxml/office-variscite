@@ -1,0 +1,112 @@
+# Translation of Plugins - jQuery Manager for WordPress - Development (trunk) in German
+# This file is distributed under the same license as the Plugins - jQuery Manager for WordPress - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-25 12:23:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - jQuery Manager for WordPress - Development (trunk)\n"
+
+#: jquery-manager.php:110
+msgid "<strong style=\"font-size: 21px;\">Thank you for using jQuery Manager 👍</strong> <span style=\"margin-right: 10px;font-size: 18px;\">This plugin is brand new, it could use some attention. Please leave a review 😉</span><a href=\"https://wordpress.org/support/plugin/jquery-manager/reviews/#new-post\" class=\"button secondary\" target=\"_blank\" rel=\"noopener noreferrer\">Add your review</a>"
+msgstr "<strong style=\"font-size: 21px;\">Danke, dass du jQuery Manager benutzt 👍</strong> <span style=\"margin-right: 10px;font-size: 18px;\">Dieses Plugin ist ganz neu, es könnte etwas Aufmerksamkeit vertragen. Bitte schreib eine Bewertung 😉</span><a href=\"https://wordpress.org/support/plugin/jquery-manager/reviews/#new-post\" class=\"button secondary\" target=\"_blank\" rel=\"noopener noreferrer\">Deine Bewertung hinzufügen</a>"
+
+#: jquery-manager.php:93
+msgid "This plugin can not be activated because either your WordPress instalation has an outdated/unsuported PHP version or you are using an outdated/old WordPress version.<br><br>This plugin requires a minimum of <strong>PHP 5.6 or greater</strong> and <strong>WordPress 4.9 or greater</strong>.<br><br> Your install:<br><strong>PHP: "
+msgstr "Dieses Plugin kann nicht aktiviert werden, weil entweder deine WordPress-Installation mit einer veralteten/nicht unterstützten PHP-Version läuft oder du benutzt eine veraltete WordPress-Version.<br><br>Dieses Plugin erfordert minimal <strong>PHP 5.6 oder höher</strong> und <strong>WordPress 4.9 oder höher</strong>.<br><br> Deine Installation:<br><strong>PHP: "
+
+#: jquery-manager.php:286
+msgid "Experimental! Some plugins and/or themes do not support this. <strong>Broken for now, does nothing.</strong> See: https://github.com/Remzi1993/jquery-manager/issues/8"
+msgstr "Experimentell! Manche Plugins und/oder Themes unterstützen dies nicht. <strong>Momentan funktionslos, tut nichts.</strong> Siehe: https://github.com/Remzi1993/jquery-manager/issues/8"
+
+#: jquery-manager.php:285
+msgid "jQuery Migrate execution"
+msgstr "jQuery-Migrate-Ausführung"
+
+#: jquery-manager.php:275
+msgid "Choose where to put jQuery Migrate in the <strong>&lt;head&gt;</strong> or at the end of the <strong>&lt;body&gt;</strong> tag, just before it closes"
+msgstr "Wähle, ob jQuery Migrate im <strong>&lt;head&gt;</strong> oder am Ende des <strong>&lt;body&gt;</strong>-Tags eingefügt werden soll, bevor dieses schließt"
+
+#: jquery-manager.php:274
+msgid "jQuery Migrate code"
+msgstr "jQuery-Migrate-Code"
+
+#: jquery-manager.php:262
+msgid "Select a particular jQuery Migrate version"
+msgstr "Wähle eine bestimmte jQuery-Migrate-Version aus"
+
+#: jquery-manager.php:261
+msgid "jQuery Migrate version"
+msgstr "jQuery-Migrate-Version"
+
+#: jquery-manager.php:254
+msgid "jQuery Migrate"
+msgstr "jQuery Migrate"
+
+#: jquery-manager.php:244
+msgid "Debug mode"
+msgstr "Debug-Modus"
+
+#: jquery-manager.php:233
+msgid "Experimental! Some plugins and/or themes may not support this. <strong>Broken for now, does nothing.</strong> See: https://github.com/Remzi1993/jquery-manager/issues/8"
+msgstr "Experimentell! Manche Plugins und/oder Themes unterstützen dies möglicherweise nicht. <strong>Momentan funktionslos, tut nichts.</strong> Siehe: https://github.com/Remzi1993/jquery-manager/issues/8"
+
+#: jquery-manager.php:232
+msgid "jQuery execution"
+msgstr "jQuery-Ausführung"
+
+#: jquery-manager.php:216
+msgid "Select a particular jQuery version"
+msgstr "Wähle eine bestimmte jQuery-Version aus"
+
+#: jquery-manager.php:215
+msgid "jQuery version"
+msgstr "jQuery-Version"
+
+#: jquery-manager.php:209 jquery-manager.php:245 jquery-manager.php:255
+msgid "On / Off"
+msgstr "An/Aus"
+
+#: jquery-manager.php:208
+msgid "jQuery"
+msgstr "jQuery"
+
+#: jquery-manager.php:183
+msgid "jQuery Migrate settings"
+msgstr "jQuery-Migrate-Einstellungen"
+
+#: jquery-manager.php:179
+msgid "jQuery settings"
+msgstr "jQuery-Einstellungen"
+
+#: jquery-manager.php:96
+msgid "go back"
+msgstr "Zurück gehen"
+
+#: inc/settings-api.php:371
+msgid "Choose File"
+msgstr "Datei auswählen"
+
+#. Author URI of the plugin
+msgid "https://twitter.com/remzicavdar"
+msgstr "https://twitter.com/remzicavdar"
+
+#. Author of the plugin
+msgid "Remzi Cavdar"
+msgstr "Remzi Cavdar"
+
+#. Description of the plugin
+msgid "Manage jQuery and jQuery Migrate, activate a specific jQuery and/or jQuery Migrate version. The ultimate jQuery debugging tool for WordPress. This plugin is an open source project, made possible by your contribution (code). Development is done on GitHub."
+msgstr "Verwalte jQuery und jQuery Migrate, aktiviere eine bestimmte Version von jQuery und/oder jQuery Migrate. Das ultimative jQuery-Debugging-Werkzeug für WordPress. Dieses Plugin ist ein Open-Source-Projekt, möglich gemacht durch deinen Beitrag (Code). Die Entwicklung findet statt auf GitHub."
+
+#. Plugin URI of the plugin
+msgid "https://github.com/Remzi1993/jquery-manager"
+msgstr "https://github.com/Remzi1993/jquery-manager"
+
+#. Plugin Name of the plugin
+msgid "jQuery Manager for WordPress"
+msgstr "jQuery Manager for WordPress"

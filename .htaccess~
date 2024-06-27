@@ -1,0 +1,455 @@
+# BEGIN WP Rocket v3.15.3
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset UTF-8
+# Force UTF-8 for a number of file formats
+<IfModule mod_mime.c>
+AddCharset UTF-8 .atom .css .js .json .rss .vtt .xml
+</IfModule>
+
+# FileETag None is not enough for every server.
+<IfModule mod_headers.c>
+Header unset ETag
+</IfModule>
+
+# Since we’re sending far-future expires, we don’t need ETags for static content.
+# developer.yahoo.com/performance/rules.html#etags
+FileETag None
+
+<IfModule mod_alias.c>
+<FilesMatch "\.(html|htm|rtf|rtx|txt|xsd|xsl|xml)$">
+<IfModule mod_headers.c>
+Header set X-Powered-By "WP Rocket/3.15.3"
+Header unset Pragma
+Header append Cache-Control "public"
+Header unset Last-Modified
+</IfModule>
+</FilesMatch>
+
+<FilesMatch "\.(css|htc|js|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|json|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|wav|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$">
+<IfModule mod_headers.c>
+Header unset Pragma
+Header append Cache-Control "public"
+</IfModule>
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+	AddType image/avif                                  avif
+    AddType image/avif-sequence                         avifs
+</IfModule>
+# Expires headers (for better cache control)
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresDefault                              "access plus 1 month"
+	# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
+	ExpiresByType text/cache-manifest           "access plus 0 seconds"
+	# Your document html
+	ExpiresByType text/html                     "access plus 0 seconds"
+	# Data
+	ExpiresByType text/xml                      "access plus 0 seconds"
+	ExpiresByType application/xml               "access plus 0 seconds"
+	ExpiresByType application/json              "access plus 0 seconds"
+	# Feed
+	ExpiresByType application/rss+xml           "access plus 1 hour"
+	ExpiresByType application/atom+xml          "access plus 1 hour"
+	# Favicon (cannot be renamed)
+	ExpiresByType image/x-icon                  "access plus 1 week"
+	# Media: images, video, audio
+	ExpiresByType image/gif                     "access plus 4 months"
+	ExpiresByType image/png                     "access plus 4 months"
+	ExpiresByType image/jpeg                    "access plus 4 months"
+	ExpiresByType image/webp                    "access plus 4 months"
+	ExpiresByType video/ogg                     "access plus 4 months"
+	ExpiresByType audio/ogg                     "access plus 4 months"
+	ExpiresByType video/mp4                     "access plus 4 months"
+	ExpiresByType video/webm                    "access plus 4 months"
+	ExpiresByType image/avif                    "access plus 4 months"
+	ExpiresByType image/avif-sequence           "access plus 4 months"
+	# HTC files  (css3pie)
+	ExpiresByType text/x-component              "access plus 1 month"
+	# Webfonts
+	ExpiresByType font/ttf                      "access plus 4 months"
+	ExpiresByType font/otf                      "access plus 4 months"
+	ExpiresByType font/woff                     "access plus 4 months"
+	ExpiresByType font/woff2                    "access plus 4 months"
+	ExpiresByType image/svg+xml                 "access plus 4 months"
+	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+	# CSS and JavaScript
+	ExpiresByType text/css                      "access plus 1 year"
+	ExpiresByType application/javascript        "access plus 1 year"
+</IfModule>
+# Gzip compression
+<IfModule mod_deflate.c>
+# Active compression
+SetOutputFilter DEFLATE
+# Force deflate for mangled headers
+<IfModule mod_setenvif.c>
+<IfModule mod_headers.c>
+SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+# Don’t compress images and other uncompressible content
+SetEnvIfNoCase Request_URI \
+\.(?:gif|jpe?g|png|rar|zip|exe|flv|mov|wma|mp3|avi|swf|mp?g|mp4|webm|webp|pdf)$ no-gzip dont-vary
+</IfModule>
+</IfModule>
+
+# Compress all output labeled with one of the following MIME-types
+<IfModule mod_filter.c>
+AddOutputFilterByType DEFLATE application/atom+xml \
+		                          application/javascript \
+		                          application/json \
+		                          application/rss+xml \
+		                          application/vnd.ms-fontobject \
+		                          application/x-font-ttf \
+		                          application/xhtml+xml \
+		                          application/xml \
+		                          font/opentype \
+		                          image/svg+xml \
+		                          image/x-icon \
+		                          text/css \
+		                          text/html \
+		                          text/plain \
+		                          text/x-component \
+		                          text/xml
+</IfModule>
+<IfModule mod_headers.c>
+Header append Vary: Accept-Encoding
+</IfModule>
+</IfModule>
+
+<IfModule mod_mime.c>
+AddType text/html .html_gzip
+AddEncoding gzip .html_gzip
+</IfModule>
+<IfModule mod_setenvif.c>
+SetEnvIfNoCase Request_URI \.html_gzip$ no-gzip
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTPS} on [OR]
+RewriteCond %{SERVER_PORT} ^443$ [OR]
+RewriteCond %{HTTP:X-Forwarded-Proto} https
+RewriteRule .* - [E=WPR_SSL:-https]
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteRule .* - [E=WPR_ENC:_gzip]
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{QUERY_STRING} =""
+RewriteCond %{HTTP:Cookie} !(wordpress_logged_in_.+|wp-postpass_|wptouch_switch_toggle|comment_author_|comment_author_email_) [NC]
+RewriteCond %{REQUEST_URI} !^(/wp-content/plugins/contact-form-7/includes/css/styles.css/|/wp-content/plugins/contact-form-7/includes/js/scripts.js/|/contact-us/|/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/varisciteweb-admin/|/(index.php/)?(.*)wp-json(/.*|$))$ [NC]
+RewriteCond %{HTTP_USER_AGENT} !^(facebookexternalhit|WhatsApp).* [NC]
+RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/wp-rocket/%{HTTP_HOST}%{REQUEST_URI}/index%{ENV:WPR_SSL}%{ENV:WPR_WEBP}.html%{ENV:WPR_ENC}" -f
+RewriteRule .* "/wp-content/cache/wp-rocket/%{HTTP_HOST}%{REQUEST_URI}/index%{ENV:WPR_SSL}%{ENV:WPR_WEBP}.html%{ENV:WPR_ENC}" [L]
+</IfModule>
+# END WP Rocket
+
+<FilesMatch ".pdf$">
+Header set X-Robots-Tag "index"
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} ^variscite.com [NC,OR]
+RewriteCond %{HTTP_HOST} ^variscite.de [NC,OR]
+RewriteCond %{HTTP_HOST} ^variscite.it
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^/?support-forum/(.*)$  https://office-dev1.variscite.co.uk/contact-us/? [L,R=301]
+RewriteRule ^/?mobile/support-forum/(.*)$  https://office-dev1.variscite.co.uk/contact-us/? [L,R=301]
+</IfModule>
+
+RewriteRule ^forum/?$(.*) https://office-dev1.variscite.co.uk/contact-us/ [R=301,L]
+# AsafA RewriteRule ^products/system-on-module-som/cortex-a72/?$ /products/system-on-module-som/?cpu_architecture=Cortex-A72$1 [R=301,L]
+RewriteRule ^products/system-on-module-som/cortex-a35/?$ /products/system-on-module-som/?cpu_architecture=Cortex-A35$1 [R=301,L]
+RewriteRule ^products/system-on-module-som/cortex-a53/?$ /products/system-on-module-som/?cpu_architecture=Cortex-A53%20/%20Krait$1 [R=301,L]
+RewriteRule ^products/system-on-module-som/cortex-a9/?$ /products/system-on-module-som/?cpu_architecture=Cortex-A9$1 [R=301,L]
+# AsafA RewriteRule ^products/system-on-module-som/cortex-a7/?$ /products/system-on-module-som/?cpu_architecture=Cortex-A7$1 [R=301,L]
+# AsafA RewriteRule ^products/system-on-module-som/cortex-a8/?$ /products/system-on-module-som/?cpu_architecture=Cortex-A8$1 [R=301,L]
+# RewriteRule ^products/single-board-computers/(.*)$ /product/single-board-computers/$1 [R=301,L]
+# RewriteRule ^products/evaluation-kits/(.*)$ /product/evaluation-kits/$1 [R=301,L]
+# RewriteRule ^products/accessories/(.*)$ /product/accessories/$1 [R=301,L]
+RewriteRule ^components/com_breezingforms/images(.*)$ https://office-dev1.variscite.co.uk/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_DVK_AM33_V1.11_Quick_Start_Guide_V1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM33-Quick-Start-Guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CustomBoard_v1_1_datasheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR_SOM_AM33_Customboard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-MX6CustomBoard_v100_DS.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-MX6CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/VAR-6UL_CUSTOMBOARD_SCH_V1_23_Doc_V1_8.pdf$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-6ulcustomboard/ [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM35_1_23.pdf$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-am35-cpu-ti-am3517-am3505/ [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_SOM_AM43_Evaluation_Kit_Quick_Start_Guide_v1.05.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR_SOM_AM43-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/VAR-DT6CustomBoard_Datasheet_v_1_1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-DT6CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/VAR-DT6CUSTOMBOARD_SCH_V1_2_DOC_V1_4.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-DT6CustomBoard-Schematics.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CUSTOMBOARD_SCH_1110G.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-AM33CustomBorad-Schematics.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6_v100_DS.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_v1-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/VAR_DVK_DT6_Quick_Start_Guide_v1.1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Quick-Start-Guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-OM3xCUSTOMBOARD_V2_3.pdf$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-om37customboard/ [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_Evaluation_Kit_Quick_Start_Guide_v1.2.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Quick-Start-Guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_Evaluation_Kit_Quick_Start_Guide_V1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM33-Quick-Start-Guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART_BOARD_SCH_0100A.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-4460_REV1_2A.pdf [R=301,L]
+# # AsafA RewriteRule ^images/stories/DataSheets/(.*)$ https://office-dev1.variscite.co.uk/$1 [R=301,L]
+RewriteRule ^component/content/index.php(.*)$ https://office-dev1.variscite.co.uk/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM44_BD_1.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-om44-cpu-ti-omap-4-omap4460/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/Dart-Board-BD.jpg(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/dart-board/$1 [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-MX8M/DART-MX8M_BD_Rev1.7.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-AM35_SOM.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-am33-cpu-ti-am335x-am3354-am3352/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DART44_BD_Site.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/dart-4460-cpu-ti-omap-4-omap4460/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/MX6Custom_BlockDiagram.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-DVK-PX3X.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/arm9/var-som-px32-cpu-marvell-pxa320/$1 [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-MX8M/VAR-MX8MCustomBoard_BD_V1.2.jpg(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-dt8mcustomboard/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/Untitled-2.jpg(.*)$ https://office-dev1.variscite.co.uk/products/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM54_BD.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/$1 [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-SD410/DART-SD410_BOTTOM.jpg(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-SD410-bottom.png$1 [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/VAR-SOM-SOLO-BOT.jpg(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-SOLO-DUAL-bottom.png$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DART44_BD_688x523.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/dart-4460-cpu-ti-omap-4-omap4460/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-MX6_BlockDiagram.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/$1 [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/VAR-SOM-MX7/var-dvk-mx7.jpg(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX7-DVK.png$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/Comparison_table.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-AM33_BD.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-am33-cpu-ti-am335x-am3354-am3352/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM54_Final.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-AM33_BlockDiagram.jpg(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-am33-cpu-ti-am335x-am3354-am3352/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-AM33CustomBoard_BD.jpg(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-am33customboard/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-AM33CustomBoard_BlockDiagram.jpg(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-am33customboard/$1 [R=301,L]
+# AsafA RewriteRule ^images/iso14001-2015.jpg(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/02/iso-2015-g.jpg$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM37_W_CSTM.gif(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-om37-cpu-ti-am3703-dm3730/$1 [R=301,L]
+RewriteRule ^products/system-on-modVAR-SOM-OM37_W_CSTM.gifule-som(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-om37-cpu-ti-am3703-dm3730/$1 [R=301,L]
+RewriteRule ^DataSheets/VAR-SOMMX25_DS_V1_1.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/arm9/var-som-mx25-cpu-freescale-imx25/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL_DART-6UL-5G_-Datasheet_Rev_2_10.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf$1 [R=301,L]
+# AsafA RewriteRule ^images/Variscite_LTD_Conflict_Minerals_Update.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_LTD_Conflict_Minerals.pdf$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VHP-MX6.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VHP-MX6.pdf$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-SD410/DART-SD410_Evaluation_Kit_Quick_Start_Guide.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/02/DART-SD410-quick-start-guide.pdf$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/Longevity_Letter-DM8148-DM8168-DM3730-DM3725-OMAP3530-OMAP3525-OMAP4430-60-70.pdf(.*)$ https://office-dev1.variscite.co.uk/product-longevity/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/Variscite_Catalog_March2016.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/Variscite_Catalog.pdf$1 [R=301,L]
+RewriteRule ^component/finder/search(.*)$ https://office-dev1.variscite.co.uk/$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL-Datasheet_Rev_2_0.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/IMX_6UltraLite_Fact_sheet.pdf(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/IMX_6UltraLite_Fact_sheet.pdf$1 [R=301,L]
+# AsafA RewriteRule ^m/images/stories/DataSheets/DARTBOARD_Quick_Start_Guide_V10.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/dart-board$1 [R=301,L]
+# AsafA  RewriteRule ^m/images/stories/DataSheets/VAR-SOM-SOLO_DUAL/VAR-SOLOCUSTOMBOARD_SCH_V1_1A_DOC_V1_3.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-solocustomboard$1 [R=301,L]
+# AsafA  RewriteRule ^mobile/images/stories/DataSheets/VAR-SOM-SOLO_DUAL/VAR-SOLOCUSTOMBOARD_SCH_V1_1A_DOC_V1_3.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-solocustomboard$1 [R=301,L]
+# AsafA  RewriteRule ^m/images/stories/DataSheets/DART-MX6/VAR-DT6CustomBoard_Datasheet_v_1_2.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/dt6customboard$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/Product-Briefs/Variscite-Catalog-2015.pdf(.*)$ https://office-dev1.variscite.co.uk/products$1 [R=301,L]
+RewriteRule ^DataSheets/VAR-SOMMX25_DS_V1_1.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/datasheets/var-som-mx6_v1_1_datasheet_v1_27.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6$1 [R=301,L]
+RewriteRule ^DataSheets/VAR-xxxxCustomBoard_V1.4_DS_Ver1.0.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/datasheets/var-mx6customboard_sch_1_3b2.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-mx6customboard$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/datasheets/var-som-solo_v1_x_datasheet_v10.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-solo-cpu-nxp-imx6$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-SOLO_v1_X_datasheet_v10.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-solo-cpu-nxp-imx6$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/datasheets/var-som-mx6_v2_1_datasheet_v101.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/datasheets/var-mx6customboard_v110_ds.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-mx6customboard$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/VAR-6ULCUSTOMBOARD_SCH_V1_2_Doc_V1_0.pdf(.*)$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-6ulcustomboard$1 [R=301,L]
+# AsafA RewriteRule ^images/dart-4460-ds_107.pdf.html(.*)$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-4460-DS_107.pdf$1 [R=301,L]
+RewriteRule ^DataSheets/VAROM35xxSBC_DS_V1_3.pdf(.*)$ http://wordpress-689526-3794037.cloudwaysapps.com$1 [R=301,L]
+RewriteRule ^DataSheets/VAR-3xCustomBoard_V2_2_DS.pdf(.*)$ https://office-dev1.variscite.co.uk/$1 [R=301,L]
+RewriteRule ^DataSheets/VAR-EXT-CB103_Rev1.0_DS1.0.pdf(.*)$ https://office-dev1.variscite.co.uk/$1 [R=301,L]
+RewriteRule ^pdf/omap35xx_ds.pdf(.*)$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-am35-cpu-ti-am3517-am3505$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM35CUSTOMBOARD_V2_21.pdf(.*)$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am35-kits$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_v1_1_Datasheet_v1_0.pdf(.*)$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-OM37_V1_0.pdf(.*)$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-om37-kit$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_v1_02_Datasheet.pdf(.*)$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits$1 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6_v101_DS.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6 [R=301,L]
+# AsafA RewriteRule ^images/Variscite_REACH_Statement.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_REACH_compliance.pdf [R=301,L]
+RewriteRule ^wp-content/uploads/2017/11/DART-MX6-bottom.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-bottom-som.png [R=301,L]
+# AsafA RewriteRule ^images/Variscite_Catalog_2013.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/Variscite_Catalog.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Mechanics/DART-4460_1.0_3D.zip$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/dart-4460-cpu-ti-omap-4-omap4460/ [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-OM37_V1_0_7.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-om37-kit [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_v1_1_Datasheet_v1_36.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM35_V1_13.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am35-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CustomBoard_v1_02_datasheet.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-MX6CustomBoard_SCH_0102.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_v1_03_Datasheet.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_v1_1_Datasheet_v1_34.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_SOM_AM33_Customboard_v1_02_datasheet.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CUSTOMBOARD_SCH_1100.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-OM37_1_23.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a8/var-som-om37-cpu-ti-am3703-dm3730 [R=301,L]
+RewriteRule ^DataSheets/VAR-SOM-MX25_DS_V1_1.pdf$ https://office-dev1.variscite.co.uk/products/system-on-module-som/arm9/var-som-mx25-cpu-freescale-imx25 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6_v100_DS.pdf$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL_v1_2_Datasheet_v1_1.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a7/dart-6ul-freescale-imx-6ul [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CUSTOMBOARD_SCH_1110B.pdf$ https://office-dev1.variscite.co.uk/prodREACHucts/single-board-computers/var-am33customboard [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CUSTOMBOARD_SCH_1000.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am33-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM35CUSTOMBOARD_V2_1.pdf$ https://office-dev1.variscite.co.uk/product/evaluation-kits/var-som-am35-kits [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-OM44CustomBoard_sch_09101.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-om44-cpu-ti-omap-4-omap4460 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-OM37CUSTOMBOARD_V2_1.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a8/var-som-om37-cpu-ti-am3703-dm3730 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-OM44_v1.1_datasheet_v1.2.pdf$ https://office-dev1.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-om44-cpu-ti-omap-4-omap4460 [R=301,L]
+# AsafA # AsafA RewriteRule ^images/stories/DataSheets/VAR-3xCustomBoard_V2_1_DS.pdf$ https://office-dev1.variscite.co.uk/ [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM35_1_23.pdf$ https://office-dev1.variscite.co.uk/products/system-on-module-som/cortex-a8/var-som-am35-cpu-ti-am3517-am3505?highlight=WyJhbTM1Il0= [R=301,L]
+RewriteRule ^DataSheets/VAR-OM35xxSBC_DS_V1_3.pdf$ https://office-dev1.variscite.co.uk/products/single-board-computers/var-am35customboard [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-OM44CustomBoard_Rev._0.9.1_Data_Sheet_V1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-OM44_v1_3_datasheet_v1.26_11242016.pdf [R=301,L]
+# AsafA RewriteRule ^images/Variscite_RoHS_compliance.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_RoHS_compliance.pdf [R=301,L]
+# AsafA RewriteRule ^images/Variscite_REACH_Compliance_July_2016.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_REACH_compliance.pdf [R=301,L]
+# AsafA RewriteRule ^images/Variscite_REACH_compliance_Feb17.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_REACH_compliance.pdf [R=301,L]
+# AsafA RewriteRule ^images/Variscite_ISO_90012008.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_ISO_90012008.pdf [R=301,L]
+# AsafA RewriteRule ^images/Variscite_ISO_140012015.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/Variscite_ISO_90012008.pdf [R=301,L]
+# AsafA RewriteRule ^images/Variscite_Catalog_2014.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/Variscite_Catalog.pdf [R=301,L]
+# AsafA RewriteRule ^images/VAR-SOM-MX6_buidling_embedded_solutions_with_Linux.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/02/Embedded-linux-with-VAR-SOM-MX6-course.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/Variscite_Catalog.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/Variscite_Catalog.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/VAR-SOM-SOLO_DUAL_Product_Brief.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-SOLO_DUAL_Product_Brief.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/VAR-SOM-MX6_Product_Brief.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_Product_Brief.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/DART-SD800_Product_Brief.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-SD800_Product_Brief.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/DART-6UL_Product_Brief.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-6UL_Product_Brief.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Product_Briefs/DART_SD410_Product_Brief.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART_SD410_Product_Brief.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/i.MX6_SoC_Comparion_Chart.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/i.MX6_SoC_Comparion_Chart.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-SOLO_DUAL/VAR-SOM-SOLO_DUAL_v1_X_datasheet_v102.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-SOLO_DUAL_datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-SD600_ds_v10.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-SD600_ds_v10.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-OM44_Thermal_AppNote_Rev1_0_141211.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-OM44_Thermal_AppNote_Rev1_0_141211.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-OM37_1_31.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-OM37-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX7/VAR-SOM-MX7_v1_X_datasheet_v1_2.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX7_VAR-SOM-MX7-5G_datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX7/VAR-SOM-MX7_v1_0_datasheet_v1_0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX7_VAR-SOM-MX7-5G_datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX7/VAR-SOM-MX7_Quick_Start_Guide_v1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/02/VAR-SOM-MX7-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX7/VAR-SOM-MX7_EVK_quick_start_guide_v1.1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/02/VAR-SOM-MX7-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6/VAR-SOM-MX6_v2_1_datasheet_v114.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_v1-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6/VAR-SOM-MX6_v2_1_datasheet_v106.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_v1-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6/VAR-SOM-MX6_v2_1_datasheet_v105.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_v1-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6/VAR-MX6Customboard_v1_3_Datasheet_.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-MX6CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6/VAR-MX6CUSTOMBOARD_SCH_1_3D-V2.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/V2_VAR-MX6CustomBoard-Schematics.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6_v2_1_datasheet_v101.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_v1-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6_v1_1_datasheet_v1_27.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6_v1-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-MX6_Evaluation_Kit_Quick_Start_Guide_V1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM43_Rev1.1_Datasheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM43_Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33/VAR-SOM-AM33_v2_1_datasheet_102.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM33_v2_datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_V2_EMC_RADIATION_TEST.PDF$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM33_V2_EMC_RADIATION_TEST.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_V2_datasheet_v2.1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM33_v2_datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-SOM-AM33_Evaluation_Kit_Quick_Start_Guide_V1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-AM33-Quick-Start-Guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-OM44CustomBoard_1_1_Rev01_020912.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-OM44CustomBoard_1_1_Rev01_020912.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-MX6CustomBoard_v110_DS.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-MX6CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-EXT-CB402_Quick_Start_Guide_v11.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-EXT-CB402_quick_start_guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM43CustomBoard_REV1.1_Datasheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-AM43CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-AM33CUSTOMBOARD_SCH_1110G.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-AM33CustomBorad-Schematics.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR-320SBC_DS.pdf$ https://office-dev1.variscite.co.uk/products/system-on-module-som/arm9/var-som-px32-cpu-marvell-pxa320/ [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_SOM_AM33_Customboard_v1_1V1_2_datasheet_Rev1_13_20052014.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR_SOM_AM33_Customboard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_DVK_SOLO_DUAL_Quick_Start_Guide.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-SOLO_DUAL-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_DVK_SOLO_DUAL_Quick_Start_Guide_v1.1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-SOLO_DUAL-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_DVK_MX6-SOLO_Quick_Start_Guide_V1.1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_DVK_MX6_Quick_Start_Guide_V1.0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX6-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/VAR_DVK_AM43_Quick_Start_Guide.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR_SOM_AM43-quick-start-guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/OMAP4460_ES1.x_PUBLIC_TRM_vK.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/OMAP4460_ES1.x_PUBLIC_TRM_vK.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DARTBOARD_Quick_Start_Guide_V10.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DARTBOARD_Quick_Start_Guide_V10.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DARTBOARD_Datasheet_Rev10.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DARTBOARD_Datasheet_Rev10.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-SD800_Datasheet_Rev_1.2.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-SD800_Datasheet_Rev_1.2.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-SD410/VAR-SD410CustomBoard_v1_x_Datasheet_v_1_1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SD410CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-SD410/DART-SD410_v1_1_Datasheet_v1_0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-SD410-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX8M/DART-MX8M_V1.x_Datasheet_V1.011.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/03/DART-MX8M-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/VAR-DT6CustomBoard_Datasheet_v_1_1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-DT6CustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/VAR_DVK_DT6_Quick_Start_Guide_v1.1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Quick-Start-Guide.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_v1_2_datasheet_v2_4.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_v1_2_datasheet_v2_3.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_v1_2_datasheet_v2_2.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_v1_1_datasheet_v1_4.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-MX6/DART-MX6_v1_1_datasheet_v1_2.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-MX6-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/VAR-6ULCustomBoard_Datasheet_v_1_0.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-6ULCustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/VAR-6UL_CUSTOMBOARD_SCH_V1_23_Doc_V1_8.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-6ULCustomboard-Schematics.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/VAR-6UL_CustomBoard_1_2_Datasheet_v_1_1.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-6ULCustomBoard-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/IMX6ULTRALITE_fact_sheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/IMX_6UltraLite_Fact_sheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/IMX_6ULL_Fact_sheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/IMX_6ULL_Fact_sheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-UL_EVK_quick_start_guide.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/DART-6UL-quick-start-guide.pdf	 [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL-Datasheet_Rev_2_5.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL-Datasheet_Rev_1_7.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL-Datasheet_Rev_1_5.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL_v1_2_Datasheet_v1_4.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL_DART-6UL-5G_-Datasheet_Rev_2_8.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/DART-6UL_DART-6UL-5G_-Datasheet_Rev_2_13.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/DART-6UL_DART-6UL-5G-Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VLCD-CAP-GLD-RGB.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VLCD-CAP-GLD-RGB.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VLCD-CAP-GLD-LVDS.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VLCD-CAP-GLD-LVDS.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VCAM-OV5640.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VCAM-OV5640.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VCAM-OV5640-V5.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VCAM-OV5640-V5.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VCAM-OV5640-SET.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VCAM-OV5640-SET.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/Accessories/VAR-EXT-CB410_Datasheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-EXT-CB410_Datasheet.pdf [R=301,L]
+# AsafA RewriteRule ^images/stories/Comparison_table_s.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/03/Comparison_table_s.png [R=301,L]
+# AsafA RewriteRule ^images/stories/Comparison_Table_sheet_v2_1.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/03/VAR-SOM-OM54_Final.jpg [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-MX25_3D.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-MX25.png [R=301,L]
+# AsafA RewriteRule ^images/stories/Comparison_Table_sheet.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/03/Comparison_table.jpg [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-EXT-CB103_3D.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-EXT-CB103.png [R=301,L]
+# AsafA RewriteRule ^images/stories/Comparison_Table_sheet_v2.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/03/Comparison_Table_sheet_v21.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM37_3D.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-OM37.png [R=301,L]
+# AsafA RewriteRule ^images/stories/Comparison_Table_sheet_v21.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/03/Comparison_Table_sheet_v21.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-6UL/DART6UL_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/VAR-SOM-UL_BD_Rev1.3.png [R=301,L]
+# AsafA RewriteRule ^images/stories/SD600CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2014/05/SD600CustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOLO-DUAL_CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOLOCustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-MX6/VAR-DT6CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2015/05/VAR-DT6CustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/DataSheets/DART-6UL/VAR-SOM-UL_BD_Rev1.3.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/VAR-SOM-UL_BD_Rev1.3.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-MX6/DART-MX6_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2015/05/DART-MX6_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-MX6_BlockDiagram_Sep2014.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-SOM-MX6_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-SOLO-DUAL_BlockDiagram.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2015/03/VAR-SOM-SOLO-DUAL_BlockDiagram.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/VAR-SOM-MX7/VAR-MX7CustomBoard_BD_V1_1.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-MX7CustomBoard_BD_V1_1.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-6UL/DART6UL_BD_2016.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/01/VAR-SOM-UL_BD_Rev1.3.png	 [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/VAR-SOM-SOLO_DUAL/VAR-SOM-SOLO-DUAL_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2015/03/VAR-SOM-SOLO-DUAL_BlockDiagram.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/VAR-SOM-MX6/VAR-SOM-MX6_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-SOM-MX6_BD.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/VAR-SOM-MX7/VAR-SOM-MX7_blockDiagram.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-SOM-MX7_blockDiagram.png [R=301,L]
+# AsafA RewriteRule ^images/parnters-logos/Qualcomm_LOGO.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2018/02/Qualcomm_LOGO.jpg [R=301,L]
+# AsafA RewriteRule ^images/stories/SD600_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2014/05/SD600_BD.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-SD410/DART-SD410_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-SD410_BD-1.png [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-SD410/VAR-SD410CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-SD410CustomBoard_BD-1.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM44_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-SOM-OM44_BD_1-1.jpg [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/DART-6UL/DART6UL_CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/06/DART6UL_CustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM44_BD_280711.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/VAR-SOM-OM44_BD_1-1.jpg [R=301,L]
+# AsafA RewriteRule ^images/new-product-images/SD600CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2014/05/SD600CustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-AM43CustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2015/01/VAR-AM43CustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOLOCustomBoard_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOLOCustomBoard_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/DART-SD800_BD.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/11/DART-SD800_BD.png [R=301,L]
+# AsafA RewriteRule ^images/stories/MX6Customboard-BD-REV2.png$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/MX6Custom_BlockDiagram.jpg [R=301,L]
+# AsafA RewriteRule ^images/stories/VAR-SOM-OM37.gif$ https://office-dev1.variscite.co.uk/wp-content/uploads/2017/12/VAR-SOM-OM37.jpg [R=301,L]
+RewriteRule ^wp-content/uploads/2019/09/VCAM-1335E_Datasheet.pdf$ https://office-dev1.variscite.co.uk/wp-content/uploads/2019/09/VCAM-AR1335E-datasheet.pdf [R=301,L]
+RewriteRule ^component/finder/search?q=大奖娱乐下载官网%20Q82019309.com.com$ https://office-dev1.variscite.co.uk [R=301,L]
+# AsafA RewriteRule ^software-releases-de/$ /system-on-modules-blog/ [R=301,L]
+# AsafA RewriteRule ^software-releases-it/$ /system-on-modules-blog/ [R=301,L]
+
+# AsafA RewriteRule ^system-on-modules-blog/(.*)$ /system-on-module-blog/$1 [R=301,NC,L]
+
+
+
+
+RedirectMatch 301 http://wordpress-689526-3794037.cloudwaysapps.com/contact-us/.4 https://office-dev1.variscite.co.uk
+RedirectMatch 301 ^/wp-content/uploads/2018/03/$ https://office-dev1.variscite.co.uk
+RedirectMatch 301 /variscite-newsletter/ https://office-dev1.variscite.co.uk
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# webp
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{HTTP_ACCEPT} image/webp
+	RewriteCond %{REQUEST_FILENAME} (.*)\.(jpe?g|png|gif)$
+	RewriteCond %{REQUEST_FILENAME}\.webp -f
+	RewriteCond %{QUERY_STRING} !type=original
+	RewriteRule (.+)\.(jpe?g|png|gif)$ %{REQUEST_URI}.webp [T=image/webp,L]
+</IfModule>
+<IfModule mod_headers.c>
+	<FilesMatch "\.(jpe?g|png|gif)$">
+		Header append Vary Accept
+	</FilesMatch>
+</IfModule>
+AddType image/webp .webp
+# End webp
+
+# MalCare WAF
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order deny,allow
+  Deny from all
+</IfModule>
+</Files>
+
+# END MalCare WAF
+
+
+<IfModule mod_headers.c>
+    Header set Permissions-Policy "browsing-topics=()"
+</IfModule>

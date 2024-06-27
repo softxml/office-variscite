@@ -1,0 +1,8 @@
+<wpml-config>
+  <admin-texts>
+    <key name="pagenavi_options">
+      <key name="prev_text"/>
+      <key name="next_text"/>
+    </key>
+  </admin-texts>
+</wpml-config>

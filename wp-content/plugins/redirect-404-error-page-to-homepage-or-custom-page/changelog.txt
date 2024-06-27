@@ -1,0 +1,105 @@
+== Changelog ==
+= 1.8.7 =
+* Fix : Delete log entries functionallity
+
+= 1.8.6 =
+* Update libraries
+
+= 1.8.5 =
+* Change ASTRA generated title for 404 page to the custom page title
+
+= 1.8.4 =
+* add buy me a coffee donation
+
+= 1.8.3 =
+* update library
+
+= 1.8.2 =
+* fix plugin deletion process
+
+= 1.8.1 =
+* update donation library
+
+= 1.8.0 =
+* remove Freemous library
+* add donate information
+
+= 1.7.9 =
+* Library update
+* Security Update
+* Test on 5.8
+
+= 1.7.8 =
+* Library update
+* improved escaping
+* test on 5.7
+
+= 1.7.7 =
+* Library update
+
+= 1.7.6 =
+* Remove link
+
+= 1.7.4 =
+* 2019/11/13
+* 5.3 update
+* settings update
+
+= 1.7.4 =
+* 2019/07/04
+* Upgrade Freemius library to 2.3.0
+
+= 1.7.3 =
+* 2019/04/03
+* Change to 404 option to ensure that 301 in not sent before 404
+
+= 1.7.2 =
+* 2019/02/28
+* Minor improvement
+
+= 1.7.1 =
+* 2019/02/25
+* Minor improvement
+
+= 1.7 =
+* 2018/12/07
+* Minor tweak to admin to cater for 5.0 block editor
+
+
+= 1.6 =
+* 2018/09/06
+* Added capturing template 404 redirects, where plugins like mailpoet handle redirsts directly to template.
+
+
+= 1.4 =
+* 2018/09/01
+* Added logging capability
+
+
+= 1.4 =
+* 2018/06/01
+* Changed to keep admin redirects e.g. admin / login etc
+
+
+= 1.3 =
+* 2018/08/01
+* Transferred to Fullworks for future development
+* Changed permalink warning to admin notice
+* Made language translatable
+* Made pages selectable
+* Added reset to default to settings
+* Added freemius opt in
+* Added 404 redirect type for custom 404 pages
+
+= 1.2 =
+* 2018/07/20
+* added 301/302 redirect type option
+* reworked readme.txt
+
+= 1.01 =
+* 2018/05/09
+* WebFactory took over development
+
+= 1.0 =
+* 2016/05/27
+* Initial release

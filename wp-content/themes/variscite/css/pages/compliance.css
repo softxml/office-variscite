@@ -1,0 +1,68 @@
+.compliance-page .page-title-box {
+    background-image: url(/wp-content/uploads/2021/02/sitemap-header.webp);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 50% 100%;
+    margin-top: 100px;
+    padding: 75px 0 150px
+}
+
+@media (max-width: 1024px) {
+    .compliance-page .panel-grid {
+        margin-bottom: 0 !important;
+    }
+    .compliance-page .panel-grid:first-child {
+        margin-bottom: 40px !important;
+    }
+    .compliance-page .title-box .widgettitle {
+        font-size: 30px !important
+    }
+    .compliance-page .compliance-types-row {
+        margin-bottom: 0;
+        padding-bottom: 0 !important
+    }
+    .compliance-types-row .innerWrap {
+        flex-wrap: wrap
+    }
+    .compliance-page .compliance-types-row .panel-grid-cell:nth-child(1),
+    .compliance-page .compliance-types-row .panel-grid-cell:nth-child(3) {
+        width: 20% !important;
+        padding: 0 !important
+    }
+    .compliance-page .compliance-types-row .panel-grid-cell:nth-child(2),
+    .compliance-page .compliance-types-row .panel-grid-cell:nth-child(4) {
+        width: 80% !important;
+        padding: 0 0 0 20px !important
+    }
+    .compliance-page .compliance-types-row .panel-grid-cell:nth-child(2) .text-box,
+    .compliance-page .compliance-types-row .panel-grid-cell:nth-child(4) .text-box {
+        width: 90% !important
+    }
+    .compliance-page .compliance-types-row .panel-grid-cell img {
+        margin: 0 auto
+    }
+    .compliance-page .compliance-types-row .sitBuilderTextWidget {
+        margin-bottom: 40px
+    }
+}
+
+@media (max-width: 767px) {
+    .compliance-page .page-title-box {
+        margin-top: -30px;
+        padding-bottom: 80px;
+        background-position: 50% 50%;
+        background-size: cover
+    }
+    .compliance-page .title-box .widgettitle {
+        font-size: 24px !important;
+    }
+    .compliance-page .compliance-types-row {
+        margin-bottom: 0 !important
+    }
+    .compliance-page .compliance-types-row .widgettitle {
+        font-size: 20px !important
+    }
+    .compliance-page .mt30x {
+        margin-top: 0 !important
+    }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="24" viewBox="0 0 13 24">
+
+	<style type="text/css">
+	path, circle, polygon { padding: 6px 12px; }
+	path:hover, circle:hover, polygon:hover { fill: #F56323; }
+	</style>
+
+
+    <defs>
+        <path id="a" d="M5.417 9.672L1.399 5.605 0 6.915l4.92 5.017L.045 16.95l1.354 1.311 4.018-4.249V24L13 16.95v-.001l-5.236-5.107L13 6.96 5.417 0v9.672zm1.85-5.65l2.844 2.712-2.844 2.848v-5.56zm0 10.034l2.844 2.848-2.844 2.712v-5.56z"/>
+    </defs>
+    <use fill="#9B9B9B" fill-rule="evenodd" xlink:href="#a"/>
+</svg>

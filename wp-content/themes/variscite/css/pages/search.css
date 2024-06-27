@@ -1,0 +1,126 @@
+.search-page-wrap .container {
+    width: 978px
+}
+.search-page-wrap .page-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 100px 0 35px
+}
+.search-page-wrap .search-section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 7px;
+    margin: 65px 0 45px;
+    border-bottom: solid 1px #d3d3d3
+}
+.search-page-wrap .search-form .col-md-11 {
+    padding-right: 0
+}
+.search-page-wrap .search-form .col-md-1 {
+    padding-left: 0
+}
+.search-page-wrap .search-form .btn {
+    padding: 13px;
+    width: 100%;
+    max-width: 100%
+}
+.search-page-wrap .search-post-box {
+    margin-bottom: 35px
+}
+.search-page-wrap .search-post-box h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0 0 16px
+}
+.search-page-wrap .search-post-box p {
+    line-height: 26px;
+    font-size: 16px
+}
+.search-page-wrap .filter-pitem {
+    margin-bottom: 95px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease
+}
+.search-page-wrap .filter-pitem .item-title {
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: lighter
+}
+.search-page-wrap .filter-pitem .item-title a {
+    color: #000
+}
+.search-page-wrap .filter-pitem .item-title a:hover {
+    text-decoration: none
+}
+.search-page-wrap .filter-pitem .excerpt-product-spec .spec-row {
+    line-height: 26px
+}
+.search-page-wrap .filter-pitem .actions-box {
+    font-size: 16px
+}
+.search-page-wrap .filter-pitem .actions-box .btn {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 18px;
+    width: 120px;
+    height: 40px
+}
+.search-page-wrap .filter-pitem .actions-box label {
+    display: block;
+    cursor: pointer
+}
+.search-page-wrap .filter-pitem .actions-box input[type=checkbox] {
+    display: none
+}
+.search-page-wrap .filter-pitem .actions-box input[type=checkbox] + label {
+    font-weight: 400
+}
+.search-page-wrap .filter-pitem .actions-box input[type=checkbox] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
+    background: url(../../images/checkbox/filter-checkbox-empty-dark.png) left top no-repeat;
+    cursor: pointer
+}
+.search-page-wrap .filter-pitem .actions-box input[type=checkbox]:checked + label span {
+    background: url(../../images/checkbox/filter-checkbox-checked.png) left top no-repeat
+}
+.search-page-wrap .filter-pitem .actions-box a.visit-product {
+    position: relative;
+    text-align: left
+}
+.search-page-wrap .filter-pitem .actions-box a.visit-product:after {
+    content: ' ';
+    background: url(../../images/black-arrow-right.png) 8px 60% no-repeat;
+    width: 18px;
+    height: 24px;
+    display: inline-block;
+    float: right
+}
+.search-page-wrap .filter-pitem .actions-box a.visit-product:hover:after {
+    background: url(../../images/white-arrow-right.png) 8px 60% no-repeat
+}
+.search-page-wrap .toggleVisible {
+    width: 227px;
+    height: 40px;
+    background-color: #f56323;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0 80px
+}
+
+.search-box {
+    margin-top: 50px
+}
+
+
+@media (max-width: 767px) {
+    .search-page-wrap .page-title {
+        font-size: 24px;
+        margin: 60px 0 0
+    }
+}

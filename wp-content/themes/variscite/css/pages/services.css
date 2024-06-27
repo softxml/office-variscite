@@ -1,0 +1,131 @@
+.services-page .widgettitle a {
+    color: inherit;
+    text-decoration: none
+}
+.services-page .sitBuilderServicesWidget .rm,
+.sitBuilderServicesWidget .widgetTxtBlock .text-box a.rm:hover {
+    text-decoration: underline
+}
+.sitBuilderServicesWidget {
+    height: 100%
+}
+.sitBuilderServicesWidget .widgetTxtBlock {
+    padding: 80px 60px 80px 110px
+}
+.sitBuilderServicesWidget .widgetTxtBlock .text-box p {
+    line-height: 1.63
+}
+.sitBuilderServicesWidget .widgetTxtBlock .text-box p:first-child {
+    margin-bottom: 15px
+}
+.sitBuilderServicesWidget .widgetTxtBlock .text-box a.rm {
+    color: inherit;
+    font-size: inherit;
+    font-style: inherit
+}
+.sitBuilderServicesWidget .widgetTxtBlock .widgettitle {
+    font-size: 28px !important;
+}
+
+
+@media (max-width: 1445px) {
+    .sitBuilderServicesWidget .widgetTxtBlock {
+        padding: 80px 40px
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .sitBuilderServicesWidget .widgetTxtBlock {
+        padding: 60px
+    }
+    .sitBuilderServicesWidget .widgetTxtBlock .widgettitle {
+        font-size: 22px !important
+    }
+}
+
+@media (max-width: 1024px) {
+    .sitBuilderServicesWidget .widgetTxtBlock {
+        padding: 40px 30px
+    }
+    .sitBuilderServicesWidget .title-box {
+        width: 80%
+    }
+    .sitBuilderServicesWidget .widgettitle {
+        font-size: 26px !important
+    }
+    .services-page .services-desc-row .innerWrap {
+        padding: 0 !important
+    }
+    .services-page .services-desc-row .panel-grid-cell {
+        width: 50% !important;
+        padding: 0 15px !important;
+        margin-bottom: 0 !important
+    }
+    .services-page #pg-21-1,
+    .services-page #pg-21-2 {
+        margin-bottom: 30px
+    }
+}
+
+@media (max-width: 991px) {
+    .services-page #pl-13408 .sitBuilderServicesWidget .widgetTxtBlock {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 780px) {
+    .services-page #pl-13408 .sitBuilderServicesWidget .widgetTxtBlock {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-page #pg-21-1,
+    .services-page #pg-21-2 {
+        margin-bottom: 0
+    }
+    .sitBuilderServicesWidget {
+        height: auto
+    }
+    .sitBuilderServicesWidget .title-box {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 0 23px
+    }
+    .sitBuilderServicesWidget .widgetTxtBlock {
+        margin: 0 0 30px
+    }
+    .services-page .services-desc-row .panel-grid-cell {
+        width: 100% !important
+    }
+    .services-page .title-icon {
+        flex: 0 0 75px;
+        max-width: 75px;
+        margin: 0 20px 0 0
+    }
+    .services-page .title-icon img {
+        max-width: 100%
+    }
+    .sitBuilderServicesWidget .widgetTxtBlock .widgettitle {
+        font-weight: 500;
+        margin: 0;
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+    .services-page footer .menus .singleWidget {
+        display: flex;
+        flex-direction: column
+    }
+    .sitBuilderTextWidget {
+        margin-bottom: 30px !important
+    }
+    .text-box,
+    .text-box p,
+    .sitBuilderServicesWidget .widgetTxtBlock .widgettitle {
+        font-size: 14px !important
+    }
+}

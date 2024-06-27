@@ -1,0 +1,293 @@
+.about-head-row {
+    background: url(/wp-content/uploads/2021/02/about-header.webp) no-repeat 100% 0;
+    background-size: 50% auto;
+    padding: 180px 0 300px
+}
+.about-head-row:before {
+    content: '';
+    background: #f56323;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 0;
+}
+.about-head-row .innerWrap {
+    position: relative;
+    z-index: 1
+}
+.years-row {
+    background: #fff;
+    margin-top: -120px;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1
+}
+.years-items .text-box {
+    padding: 0 10px 80px 50px
+}
+.years-items{
+    position: relative;
+}
+.years-items:before {
+    content: '';
+    background: #f66324;
+    width: 3px;
+    height: calc(100% - 110px);
+    position: absolute;
+    top: 48px;
+    left: 25px;
+}
+
+
+.years-items .about-years {
+    width: 100%;
+    padding: 0 30px;
+    position: relative;
+}
+
+.about-years .widgettitle {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0 0 0 45px;
+    position: relative;
+    margin: 20px 0 5px;
+}
+.about-years .widgettitle:before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #f56323;
+    position: absolute;
+    left: 9px;
+    top: 0;
+    border-radius: 50%
+}
+.about-years .mini-list {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+.about-years .text-box p,
+.about-years .mini-list li {
+    display: block;
+    position: relative;
+    padding:  0 0 0 18px
+}
+.about-years .text-box p:before,
+.about-years .mini-list li:before {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    display: inline-block;
+    content:  "\f00c";
+    font: normal normal normal 12px/1.5 FontAwesome
+}
+.about-page .mini-list li {
+    margin-bottom: 20px
+}
+.about-page .mini-list li:last-child {
+    margin-bottom: 0
+}
+.workus-row {
+    background-image: url("/wp-content/uploads/2021/02/work-with-us-desktop.webp");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover
+}
+.workus-row .panel-grid-cell:last-child {
+    padding: 0 10%
+}
+.about-page .popover {
+    max-width: 280px !important
+}
+.about-page .popover.active {
+    transition: all .5s;
+    transform: translateY(40px)
+}
+.about-partners-grid .panel-grid-cell {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px -45px 0;
+    align-items: flex-start;
+    width: calc(100% + 90px) !important
+}
+.about-partners-grid .sobImageWidget {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 45px;
+    height: 100px;
+    margin: 0 0 65px
+}
+.about-partners-grid .sobImageWidget a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center
+}
+.about-partners-grid .sobImageWidget:last-child a {
+    justify-content: flex-start
+}
+.about-partners-grid .sobImageWidget img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto
+}
+.partners-box-row {
+    padding-bottom: 100px
+}
+.partners-box-row > .innerWrap > .panel-grid-cell:first-child {
+    padding-right: 5%
+}
+.partners-box-row > .innerWrap > .panel-grid-cell:last-child {
+    padding-left: 5%
+}
+.years-row .text-box {
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .about-partners-btn-wrap {
+        width: 50%;
+        text-align: left;
+        padding: 0 15px;
+    }
+    .workus-image {
+        display: none !important
+    }
+}
+
+@media (min-width: 1200px) {
+    .years-items {
+        margin: 0 -15px
+    }
+    .years-items .about-years {
+        padding: 0 15px;
+    }
+    .years-items .text-box {
+        padding: 0 0 0 50px
+    }
+    .about-years .widgettitle:before {
+        left: 0;
+        top: 14px;
+        width: 24px;
+        height: 24px
+    }
+}
+
+
+@media (max-width: 1918px) {
+    .about-head-row {
+        padding: 130px 0 250px
+    }
+    .workus-row {
+        padding: 17% 0 9% !important
+    }
+}
+
+@media (max-width: 1560px) {
+    .about-head-row {
+        padding: 100px 0 190px
+    }
+}
+
+@media (max-width: 1280px) {
+    .about-head-row {
+        background-size: auto 100%
+    }
+}
+
+@media (max-width: 1199px) {
+    .years-items:before {
+        height: calc(100% - 216px);
+        top: 35px;
+        left: 46px;
+    }
+}
+@media (max-width: 1024px) {
+    .about-head-row {
+        background-size: cover;
+        background-position: 0 0
+    }
+    .about-head-row:before {
+        background: rgba(245, 99, 35, 0.8);
+        width: 100%
+    }
+    .about-head-row .text-box {
+        width: 100% !important
+    }
+    .about-partners-grid .panel-grid-cell {
+        width: calc(100% + 30px) !important;
+        margin: 0 -15px !important
+    }
+    .about-partners-grid .sobImageWidget {
+        padding: 0 15px
+    }
+    .workus-row .panel-grid-cell:last-child {
+        padding: 0 5%
+    }
+}
+
+@media (max-width: 767px) {
+    .about-head-row {
+        padding-top: 0
+    }
+    .about-head-row .title-box .widgettitle {
+        font-size: 24px !important;
+        margin-top: 80px !important;
+        margin-bottom: 25px !important
+    }
+    .about-head-row .text-box {
+        font-size: 16px !important
+    }
+    .years-row {
+        padding-bottom: 0
+    }
+    .about-years .widgettitle {
+        font-size: 24px !important
+    }
+    .workus-row {
+        background-image: none;
+        background-color: #0056a5;
+        padding: 0 0 80px !important
+    }
+    .workus-image {
+        margin: 0 -15px
+    }
+    .workus-image img {
+        margin-top: -1px;
+        width: 100%
+    }
+    .years-items:before {
+        width: 2px;
+        height: calc(100% - 131px);
+        top: 28px;
+        left: 17px;
+    }
+    .years-items .about-years {
+        width: 100%;
+        padding: 0;
+    }
+    .years-items .text-box {
+        padding: 0 10px 30px 50px;
+    }
+    .partners-box-row .title-box .widgettitle,
+    .workus-row .title-box .widgettitle {
+        font-size: 24px !important;
+        margin-bottom: 20px !important
+    }
+    .about-partners-grid .sobImageWidget {
+        margin: 0 0 30px
+    }
+    .about-page footer {
+        margin-top: 0
+    }
+}
+@media (max-width: 386px){
+    .years-items:before {
+        height: calc(100% - 152px);
+    }
+}

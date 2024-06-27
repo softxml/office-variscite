@@ -1,0 +1,184 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Wilfried Mestdagh <wilfried@mestdagh.biz>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: src/redirect-404-error-page-to-homepage-or-custom-page.php:84
+msgid ""
+"Cannot execute as the plugin already exists, if you have a free version "
+"installed deactivate that and try again"
+msgstr ""
+"Niet uitvoerbaar vermits de plugin reeds bestaat. Als je een gratis versie "
+"heb geïnstalleerd, deactiveer het dan en probeer opnieuw."
+
+#: src/admin/class-admin-pages.php:85
+msgid "Are you sure want to do this?"
+msgstr "Ben je zeker?"
+
+#: src/admin/class-admin-pages.php:197
+msgid "Save Options"
+msgstr "Bewaar opties"
+
+#: src/admin/class-admin-pages.php:225
+msgid "Save"
+msgstr "Bewaar"
+
+#: src/admin/class-admin-pages.php:241
+msgid "Settings reset to defaults."
+msgstr "Stel default waarden in"
+
+#: src/admin/class-admin-settings.php:36
+msgid "Redirect 404"
+msgstr "404 doorverwijzing"
+
+#: src/admin/class-admin-settings.php:105
+msgid "Information"
+msgstr "Informatie"
+
+#: src/admin/class-admin-settings.php:113
+msgid "Redirect Settings"
+msgstr "Instellingen doorverwijzing"
+
+#: src/admin/class-admin-settings.php:121
+msgid "404 Log Settings"
+msgstr "404 log instellingen"
+
+#: src/admin/class-admin-settings.php:140
+msgid "Welcome to the free 404 redirection plugin"
+msgstr "Welkom bij de gratis 404 doorverwijzing plugin"
+
+#: src/admin/class-admin-settings.php:144
+msgid ""
+"This plugin can be configured to redirect missing pages (404) to either the "
+"home page or a custom page as required"
+msgstr ""
+"Deze plugin kan je instellen om ontbrekende pagina's (404) door te verwijzen "
+"naar je home pagina of naar een andere pagina naar wens."
+
+#: src/admin/class-admin-settings.php:147
+msgid ""
+"This is very useful if your site has been undergoing changes and Google "
+"still have pages that have gone in the index, this way you visitors will not "
+"get the standard 404 page, and educate Google that the missing pages are now "
+"the home page or custom page as required."
+msgstr ""
+"Dit is vooral interessant als je site veel wijzigingen ondergaat en sommige "
+"pagina's zijn nog in de Google index. Zo krijgen je bezoekers niet de "
+"standaard 404 pagina, en Google leert dat de niet bestaande pagina's nu de "
+"door jou gekozen pagina zijn."
+
+#: src/admin/class-admin-settings.php:150
+msgid ""
+"Or, if you have an ugly 404 page, you can now add a page as a custom error "
+"page and set the return code to 404 instead."
+msgstr ""
+"Of je hebt misschien een lelijke 404 pagina. Indien zo kan je zelf een "
+"aangepaste  404 pagina maken."
+
+#: src/admin/class-admin-settings.php:172
+msgid "Cant set home page to return a 404 code that would be a bad idea"
+msgstr ""
+"Je kan je home pagina niet instellen om een foutcode 404 te geven. Dat zou "
+"een slecht idee zijn."
+
+#: src/admin/class-admin-settings.php:201
+msgid "Redirect to"
+msgstr "Verwijs door naar"
+
+#: src/admin/class-admin-settings.php:211
+msgid " Page"
+msgstr "Pagina"
+
+#: src/admin/class-admin-settings.php:215
+msgid "Redirect Type"
+msgstr "Soort doorverwijzing"
+
+#: src/admin/class-admin-settings.php:247
+msgid "Log"
+msgstr "Log"
+
+#: src/admin/class-admin-settings.php:255
+msgid "Enable logging of 404 errors"
+msgstr "Schakel logging in van de 404 fouten"
+
+#: src/admin/class-admin-settings.php:260
+msgid "Do not redirect"
+msgstr "Niet doorverwijzen"
+
+#: src/admin/class-admin-settings.php:269
+msgid ""
+"Tick this if you want the plugin redirect settings to be IGNORED, any only "
+"log 404s"
+msgstr ""
+"Vink dit aan als de plugin doorverwijzingsinstellingen moeten genegeerd "
+"worden, en alleen de 404's moeten gelogd worden."
+
+#: src/admin/class-admin-settings.php:274
+msgid "Log history"
+msgstr "Log historiek"
+
+#: src/admin/class-admin-settings.php:284
+msgid "Days"
+msgstr "Dagen"
+
+#: src/admin/class-admin-settings.php:286
+msgid "Select the number of days to keep 404 log history"
+msgstr "Selecteer het aantal dagen om de 404 omleidingen in de log te houden"
+
+#: src/admin/class-admin-table-404-log.php:18
+msgid "404 Log"
+msgstr "404 log"
+
+#: src/admin/class-admin-table-404-log.php:35,
+#: src/admin/class-list-table-404-log.php:22
+msgid "404 Log Entries"
+msgstr "404 logging"
+
+#: src/admin/class-admin.php:68
+msgid ""
+"%sPermalinks%s have to be enabled in order for the redirect to work. "
+"( Redirect 404 Error Page to Homepage or Custom Page Plugin )"
+msgstr ""
+"%sPermalinks%s moeten ingeschakeld zijn om de omleiding te laten werken.  "
+"(Redirect 404 Error Page to Homepage or Custom Page Plugin)"
+
+#: src/admin/class-list-table-404-log.php:21
+msgid "404 Log Entry"
+msgstr "404 log"
+
+#: src/admin/class-list-table-404-log.php:29
+msgid "No current 404 log entries"
+msgstr "Op dit ogenblik geen 404 log"
+
+#: src/admin/class-list-table-404-log.php:40
+msgid "Delete"
+msgstr "Wissen"
+
+#: src/admin/class-list-table-404-log.php:80
+msgid "URL that returned 404"
+msgstr "De URL die een 404 foutcode gaf"
+
+#: src/admin/class-list-table-404-log.php:82
+msgid "Referring URL if known"
+msgstr "Verwijzende URL indien bekent"
+
+#: src/admin/class-list-table-404-log.php:83
+msgid "Date/Time"
+msgstr "Datum / Tijd"
+
+#: src/admin/class-list-table-404-log.php:202,
+#: src/admin/class-list-table-404-log.php:205
+msgid "Direct attempt on php code"
+msgstr "Directe poging met ppp code"
+
+#: src/includes/autoloader.php:61
+msgid "The system file attempting to be loaded at %1$s does not exist."
+msgstr "Het systeem bestand dat geladen moet worden op  %1$s bestaat niet"
