@@ -1,0 +1,64 @@
+#srp-search-container {
+    margin-bottom: 10px;
+}
+
+#srp-search {
+    width: 100%;
+    padding: 5px;
+}
+
+#srp-search-results {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+
+#srp-search-results li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+#srp-search-results li:last-child {
+    border-bottom: none;
+}
+
+#srp-search-results button,
+#srp-related-products-list button {
+    float: right;
+    margin-left: 10px;
+}
+
+#srp-related-products-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+}
+
+#srp-related-products-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+#srp-related-products-list li:last-child {
+    border-bottom: none;
+}
+
+#srp-search-results .loading {
+    text-align: center;
+    padding: 10px;
+}
+
+#srp-search-results li.loading {
+    list-style: none;
+}
+#srp-related-products-list ul li {
+    display: flex;
+    justify-content: space-between;
+}
+#srp-search-container, #srp-related-products-list {
+    margin-bottom: 20px;
+}

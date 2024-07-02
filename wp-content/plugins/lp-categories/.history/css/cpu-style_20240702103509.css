@@ -1,0 +1,79 @@
+#cpu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#cpu-search-container, #cpu-list-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cpu-search-wrapper {
+    position: relative;
+}
+
+#cpu-search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.cpu-clear-search {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+
+#cpu-search-results, #cpu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#cpu-search-results li, #cpu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#cpu-search-results li:last-child, #cpu-list li:last-child {
+    border-bottom: none;
+}
+
+button.cpu-add, button.cpu-remove {
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.cpu-add:hover, button.cpu-remove:hover {
+    background-color: #005177;
+}
+
+.cpu-name {
+    flex-grow: 1;
+}
+
+.cpu-list {
+    max-height: 200px;
+    overflow-y: auto;
+}

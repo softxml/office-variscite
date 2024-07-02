@@ -1,0 +1,68 @@
+#srp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#srp-search-container, #srp-related-products-list {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.srp-search-wrapper {
+    position: relative;
+}
+
+#srp-search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.srp-clear-search {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+
+#srp-search-results, #srp-related-products-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#srp-search-results li, #srp-related-products-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#srp-search-results li:last-child, #srp-related-products-list li:last-child {
+    border-bottom: none;
+}
+
+button.srp-add-product, button.srp-remove-product {
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.srp-add-product:hover, button.srp-remove-product:hover {
+    background-color: #005177;
+}

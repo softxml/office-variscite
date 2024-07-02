@@ -598,3 +598,329 @@ function dc_preload_image() {
 add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function () {
     return array( 1277111331, 8787, 1277153277, 8655, 6671, 1277160657 );
 } );
+
+
+
+
+
+
+function custom_display_posts_output( $output, $original_atts, $image, $title, $date, $excerpt, $inner_wrapper, $content, $class ) {
+    global $post;
+
+    // Get the post thumbnail
+    $image = get_the_post_thumbnail( $post->ID, 'large' );
+
+    // Get the custom meta field for description
+    $description = get_post_meta( $post->ID, 'vrs_specs_product_middesc', true );
+    $price = "Starting from $" . get_post_meta( $post->ID, 'vrs_specs_price', true );
+
+    // Get the post title
+    $post_title = get_the_title();
+
+    // Get the post permalink
+    $permalink = get_permalink( $post->ID );
+
+    // Initialize the specifications array
+    $specifications = [];
+
+    // Check if the repeater field has rows of data
+    if( have_rows('specs_category_values', $post->ID) ) {
+        // Loop through the rows of data
+        while ( have_rows('specs_category_values', $post->ID) ) {
+            the_row();
+            // Get sub-field values
+            $field_name = get_sub_field('fld_name');
+            $field_value = get_sub_field('fld_value');
+            $specifications[] = ['name' => $field_name, 'value' => $field_value];
+        }
+    }
+
+    // Build the item output using the provided HTML structure
+    $output = '
+    <div class="product-card">
+      <div class="product-row">
+        <div class="product-image">
+          ' . $image . '
+        </div>
+        <div class="product-details">
+          <div class="product-button">
+            <a class="product-info-button" href="' . $permalink . '">Product Info <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div class="product-text">
+            ' . $price . '
+          </div>
+        </div>
+      </div>
+      <div class="product-specifications">
+        <div class="product-title"><a href="' . $permalink . '">
+          ' . $post_title . '
+        </a></div>
+        <div class="product-specifications-inner">';
+
+    // Add each specification
+    foreach ($specifications as $spec) {
+        $output .= '
+          <div class="specification">
+            <div class="specification-name">' . esc_html($spec['name']) . ':</div>
+            <div class="specification-value">' . esc_html($spec['value']) . '</div>
+          </div>';
+    }
+
+    $output .= '
+        </div>
+      </div>
+    </div>';
+
+    return $output;
+}
+add_filter( 'display_posts_shortcode_output', 'custom_display_posts_output', 10, 9 );
+
+
+
+function wrap_display_posts_with_container( $output, $atts, $query ) {
+    static $wrap_start = false;
+
+    if (!$wrap_start) {
+        $output = '<div class="product-container">' . $output;
+        $wrap_start = true;
+    }
+
+    if ($query->current_post + 1 === $query->post_count) {
+        $output .= '</div>';
+        $wrap_start = false;
+    }
+
+    return $output;
+}
+add_filter( 'display_posts_shortcode_output', 'wrap_display_posts_with_container', 10, 3 );
+
+
+// add_action('add_meta_boxes', 'display_all_acf_meta_boxes', 20);
+
+// function display_all_acf_meta_boxes() {
+//     // Get the current post type
+//     global $typenow;
+
+//     // Get all field groups for the current post type
+//     $field_groups = acf_get_field_groups(array('post_type' => $typenow));
+
+//     if ($field_groups) {
+//         echo '<div class="acf-meta-boxes-list">';
+//         echo '<h2>ACF Meta Boxes for Post Type: ' . esc_html($typenow) . '</h2>';
+//         echo '<ul>';
+
+//         foreach ($field_groups as $field_group) {
+//             echo '<li>';
+//             echo '<strong>' . esc_html($field_group['title']) . '</strong>';
+//             echo '<ul>';
+
+//             // Get the fields for the field group
+//             $fields = acf_get_fields($field_group['key']);
+//             if ($fields) {
+//                 foreach ($fields as $field) {
+//                     echo '<li>' . esc_html($field['label']) . ' (' . esc_html($field['type']) . ')</li>';
+//                 }
+//             } else {
+//                 echo '<li>No fields found</li>';
+//             }
+
+//             echo '</ul>';
+//             echo '</li>';
+//         }
+
+//         echo '</ul>';
+//         echo '</div>';
+//     }
+// }
+
+
+
+
+add_action('acf/init', 'add_custom_tab_with_plugin_content');
+
+function add_custom_tab_with_plugin_content() {
+    if (function_exists('acf_add_local_field_group')) {
+        $field_group_key = 'group_5a1b05f517f0b'; // Replace with your actual field group key
+
+        // Get the existing field group
+        $field_group = acf_get_field_group($field_group_key);
+        if ($field_group) {
+            // Get existing fields
+            $existing_fields = acf_get_fields($field_group_key);
+
+            // Define new fields
+            $new_fields = array(
+                array(
+                    'key' => 'field_lp_products',
+                    'label' => 'Landing Page Products',
+                    'type' => 'tab',
+                ),
+                array(
+                    'key' => 'field_lp_products_content',
+                    'label' => 'Select products',
+                    'name' => 'custom_plugin_content',
+                    'type' => 'custom_plugin_content', // Custom field type
+                ),
+            );
+
+            // Merge new fields with existing fields
+            $fields = array_merge($existing_fields, $new_fields);
+
+            // Update the field group with new fields
+            acf_add_local_field_group(array(
+                'key' => $field_group_key,
+                'title' => $field_group['title'],
+                'fields' => $fields,
+                'location' => $field_group['location'],
+                'menu_order' => $field_group['menu_order'],
+                'position' => $field_group['position'],
+                'style' => $field_group['style'],
+                'label_placement' => $field_group['label_placement'],
+                'instruction_placement' => $field_group['instruction_placement'],
+                'hide_on_screen' => $field_group['hide_on_screen'],
+                'active' => $field_group['active'],
+                'description' => $field_group['description'],
+            ));
+        }
+    }
+}
+
+
+// add_action('acf/init', 'add_custom_tab_with_plugin_content');
+
+
+// function add_custom_tab_with_plugin_content() {
+//     if (function_exists('acf_add_local_field')) {
+//         $field_group_key = 'group_5a1b05f517f0b'; // Replace with your actual field group key
+
+//         // Get the existing field group
+//         $field_group = acf_get_field_group($field_group_key);
+//         if ($field_group) {
+//             // Get existing fields
+//             $fields = acf_get_fields($field_group_key);
+
+//             // Define new fields
+//             $new_fields = array(
+//                 array(
+//                     'key' => 'field_lp_products',
+//                     'label' => 'Landing Page Products',
+//                     'type' => 'tab',
+//                     'parent' => $field_group_key,
+//                 ),
+//                 array(
+//                     'key' => 'field_lp_products_content',
+//                     'label' => 'Select products',
+//                     'name' => 'custom_plugin_content',
+//                     'type' => 'message',
+//                     'message' => '', // The content will be populated dynamically
+//                     'parent' => $field_group_key,
+//                 ),
+//             );
+
+//             // Merge new fields with existing fields
+//             $fields = array_merge($fields, $new_fields);
+
+//             // Update the field group with new fields
+//             acf_add_local_field_group(array(
+//                 'key' => $field_group_key,
+//                 'title' => $field_group['title'],
+//                 'fields' => $fields,
+//                 'location' => $field_group['location'],
+//                 'menu_order' => $field_group['menu_order'],
+//                 'position' => $field_group['position'],
+//                 'style' => $field_group['style'],
+//                 'label_placement' => $field_group['label_placement'],
+//                 'instruction_placement' => $field_group['instruction_placement'],
+//                 'hide_on_screen' => $field_group['hide_on_screen'],
+//                 'active' => $field_group['active'],
+//                 'description' => $field_group['description'],
+//             ));
+//         }
+//     }
+// }
+
+
+// add_filter('acf/load_field/key=field_lp_products_content', 'populate_lp_products_content');
+
+// function populate_lp_products_content($field) {
+//     // Capture the plugin content
+//     ob_start();
+
+//     // Example of including plugin content by function
+//     if (function_exists('srp_render_plugin_content')) {
+//         echo srp_render_plugin_content(); // Call the plugin function to display content
+//     } else {
+//         echo 'Plugin content goes here.'; // Fallback content if the function does not exist
+//     }
+
+//     $content = ob_get_clean();
+
+//     // Set the field's message to the plugin content
+//     $field['message'] = $content;
+
+//     return $field;
+// }
+
+add_action('acf/include_field_types', 'register_custom_plugin_content_field');
+
+
+
+function register_custom_plugin_content_field() {
+    class acf_field_custom_plugin_content extends acf_field {
+        function __construct($settings) {
+            $this->name = 'custom_plugin_content';
+            $this->label = __('Custom Plugin Content', 'acf-custom-plugin-content');
+            $this->category = 'basic';
+            $this->defaults = array();
+            $this->settings = $settings;
+            parent::__construct();
+        }
+
+        function render_field($field) {
+            // Capture the plugin content
+            ob_start();
+            if (function_exists('srp_render_plugin_content')) {
+                echo srp_render_plugin_content();
+            } else {
+                echo 'Plugin content goes here.'; // Fallback content if the function does not exist
+            }
+            $content = ob_get_clean();
+
+            // Display the content
+            echo '<div>' . $content . '</div>';
+        }
+    }
+
+    // Initialize the custom field
+    new acf_field_custom_plugin_content(array(
+        'version' => '1.0.0',
+    ));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
