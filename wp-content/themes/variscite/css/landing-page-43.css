@@ -1,0 +1,391 @@
+.landing_page_footer_table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.landing_page_footer_column {
+    flex: 1 1 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.landing_page_footer_header, .landing_page_footer_cell {
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.landing_page_footer_header {
+    font-weight: bold;
+}
+
+.landing_page_footer_image-description {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+}
+
+.landing_page_footer_image-container {
+    flex: 0 0 35%; /* Ensure the image container takes 35% of the available width */
+    max-width: 35%; /* Ensure the image container takes 35% of the available width */
+}
+
+.landing_page_footer_image-container img {
+    width: 100%; /* Ensure the image is responsive within its container */
+    height: auto;
+}
+
+.landing_page_footer_description {
+    flex: 1; /* Allow the description to take up the remaining space */
+}
+
+.landing_page_footer_description h3 {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.landing_page_footer_description h3 a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .landing_page_footer_column {
+        flex: 1 1 100%;
+    }
+
+    .landing_page_footer_image-description {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .landing_page_footer_image-container {
+        flex: 0 0 35%; /* Ensure the image container takes 35% of the available width on mobile */
+        max-width: 35%; /* Ensure the image container takes 35% of the available width on mobile */
+    }
+
+    .landing_page_footer_image-container img {
+        max-width: 100%;
+    }
+
+    .landing_page_footer_description {
+        flex: 1; /* Allow the description to take more space */
+    }
+}
+
+.landing_page_header {
+    display: flex;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, #748192 100%);
+    height: 330px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.landing_page_header-left, .landing_page_header-right {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.landing_page_header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 11%; /* Move content closer to the center */
+}
+
+.landing_page_header-title {
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.landing_page_feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    text-align: left; /* Ensure text aligns to the left */
+}
+
+.landing_page_feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.landing_page_feature-list li span {
+    font-weight: 400;
+}
+
+.landing_page_feature-list li::before {
+    content: '\2714'; /* Check mark */
+    color: black;
+    margin-right: 10px;
+}
+
+.landing_page_image-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ensure images align to the left */
+}
+
+.landing_page_image-row img {
+    max-width: 80px;
+    height: auto;
+}
+
+.landing_page_header-right {
+    display: flex;
+    justify-content: flex-end; /* Move image closer to the right edge */
+    align-items: center;
+    padding-right: 10%; /* Move content closer to the center */
+}
+
+.landing_page_header-right img {
+    max-width: 100%;
+    height: auto;
+    max-height: 330px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .landing_page_header {
+        flex-direction: column;
+        height: auto;
+        background: none; /* Remove gradient on mobile */
+    }
+
+    .landing_page_feature-list li {
+        flex: 1 1 100%; /* Full width for mobile */
+        margin: 10px 0; /* Vertical margin for spacing */
+    }
+    
+    .landing_page_header-left, .landing_page_header-right {
+        flex: 1 1 100%;
+        padding: 11px;
+    }
+
+    .landing_page_header-right {
+        display: none; /* Hide the right column on mobile */
+    }
+    
+    .landing_page_header-title {
+        text-align: left;
+        font-size: 25px;
+        text-wrap: nowrap;
+    }
+
+    .landing_page_feature-list {
+        display: block;
+    }
+
+    .landing_page_image-row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .landing_page_header-right {
+        justify-content: center; /* Center image on mobile */
+    }
+    .landing_page_feature-list li::before {
+        content: '\2714'; /* Check mark */
+        color: black;
+        margin-right: 10px;
+        margin-top: -24px;
+    }
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+    gap: 20px;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    /*height: 400px; /* Set the height as needed */
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch; /* Ensure items stretch to the same height */
+    flex-wrap: nowrap; /* Ensure content does not wrap */
+}
+
+.product-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-details {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+    box-sizing: border-box;
+    overflow: auto; /* Ensure scrollable content if necessary */
+}
+
+.product-button {
+    margin-bottom: 3%; /* Reduce the bottom margin */
+    text-align: right;
+}
+
+.product-info-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #F56323;
+    text-wrap: nowrap;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.product-info-button:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.product-text {
+    font-size: 14px;
+    word-wrap: break-word;
+    margin-bottom: 10%;
+    color: #F56323;
+    font-weight: bold;
+    text-align: right;
+}
+
+.product-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.product-specifications {
+    width: 100%;
+    margin-top: 3%;
+}
+
+.product-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #337ab7;
+    font-weight: bold;
+}
+
+.product-specifications-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    margin-top: 5%;
+    text-wrap: nowrap;
+}
+
+
+
+.specification {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specification-name {
+    font-weight: bold;
+    flex: 1;
+}
+
+.specification-value {
+    flex: 1;
+    text-align: right; /* Align text to the right */
+    padding-left: 10px;
+}
+
+.entry-content {
+    background-color: #F5F5F5;
+    padding-bottom: 60px;
+}
+
+
+
+.landing_page_image {
+    width: 70px; /* Fixed width for the image container */
+    height: 70px; /* Fixed height for the image container */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.landing_page_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-row {
+        flex-direction: column;
+        align-items: flex-start; /* Ensure items are aligned to the start */
+    }
+
+    .product-container {
+        grid-template-columns: 1fr; /* One column on mobile */
+        gap: 20px;
+        padding-top: 40px;
+        width: 100%;
+    }
+
+    .product-image, .product-details {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .product-details {
+        align-items: flex-start; /* Align to the left on mobile */
+        text-align: left; /* Align text to the left on mobile */
+    }
+
+    .product-card {
+        gap: 10px;
+        padding: 10px;
+        width: 100%; /* Ensure the card fits within the screen width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .product-info-button {
+        width: 100%;
+        text-align: center;
+    }
+    .product-text {
+        
+        margin-top: 5%;
+        
+    }
+}
+

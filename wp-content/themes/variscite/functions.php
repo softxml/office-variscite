@@ -505,6 +505,9 @@ add_action('after_setup_theme', 'create_custom_table');
 function o_sctipts(){
     wp_enqueue_script('scripts.js' , get_stylesheet_directory_uri() . '/scripts.js', array('jquery') );
     wp_localize_script( 'scripts.js', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+    if (is_singular('landing_page')) {
+        wp_enqueue_style('landing-page-style', get_template_directory_uri() . '/css/landing-page-43.css', array(), '1.0.1');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'o_sctipts' );
 function o_sendPhoneCode(){
@@ -896,6 +899,222 @@ function register_custom_plugin_content_field() {
         'version' => '1.0.0',
     ));
 }
+
+
+
+// function create_custom_post_type() {
+//     $labels = array(
+//         'name' => 'Custom Pages',
+//         'singular_name' => 'Custom Page',
+//         'menu_name' => 'Custom Pages',
+//         'name_admin_bar' => 'Custom Page',
+//         'add_new' => 'Add New',
+//         'add_new_item' => 'Add New Custom Page',
+//         'new_item' => 'New Custom Page',
+//         'edit_item' => 'Edit Custom Page',
+//         'view_item' => 'View Custom Page',
+//         'all_items' => 'All Custom Pages',
+//         'search_items' => 'Search Custom Pages',
+//         'not_found' => 'No Custom Pages found.',
+//         'not_found_in_trash' => 'No Custom Pages found in Trash.',
+//     );
+
+//     $args = array(
+//         'labels' => $labels,
+//         'public' => true,
+//         'has_archive' => true,
+//         'show_in_rest' => true, // Enable Gutenberg editor
+//         'supports' => array( 'title', 'editor', 'thumbnail' ), // Add more as needed
+//         'rewrite' => array( 'slug' => 'custom-page' ),
+//     );
+
+//     register_post_type( 'custom_page', $args );
+// }
+// add_action( 'init', 'create_custom_post_type' );
+
+function create_landing_page_post_type() {
+    register_post_type('landing_page',
+        array(
+            'labels' => array(
+                'name' => __('Landing Pages'),
+                'singular_name' => __('Landing Page')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'landing-pages'),
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_landing_page_post_type');
+
+
+
+add_action('acf/init', 'register_landing_page_fields');
+
+function register_landing_page_fields() {
+    if (function_exists('acf_add_local_field_group')) {
+        acf_add_local_field_group(array(
+            'key' => 'group_landing_page',
+            'title' => 'Landing Page Settings',
+            'fields' => array(
+                array(
+                    'key' => 'field_landing_header_image',
+                    'label' => 'Header Image',
+                    'name' => 'landing_header_image',
+                    'type' => 'image',
+                    'instructions' => 'Upload the header image.',
+                    'return_format' => 'url',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_landing_images_repeater',
+                    'label' => 'Compliance Icons',
+                    'name' => 'landing_images_repeater',
+                    'type' => 'repeater',
+                    'instructions' => 'Upload / Pick relevant compliance logos',
+                    'sub_fields' => array(
+                        array(
+                            'key' => 'field_compliance_icon',
+                            'label' => 'Compliance Icon',
+                            'name' => 'compliance_icon',
+                            'type' => 'image',
+                            'instructions' => 'Upload the Compliance Icon.',
+                            'return_format' => 'url',
+                            'preview_size' => 'medium',
+                            'library' => 'all',
+                        ),
+                    ),
+                    'min' => 1,
+                    'max' => 10,
+                    'layout' => 'table',
+                    'button_label' => 'Add Icon',
+                ),
+                array(
+                    'key' => 'field_landing_header_text',
+                    'label' => 'Header Text',
+                    'name' => 'landing_header_text',
+                    'type' => 'wysiwyg',
+                    'instructions' => 'Enter the header text.',
+                ),
+                array(
+                    'key' => 'field_landing_selected_specs',
+                    'label' => 'Selected Specs Pages',
+                    'name' => 'landing_selected_specs',
+                    'type' => 'relationship',
+                    'instructions' => 'Select the specs pages to display.',
+                    'post_type' => array('specs'), // Change 'product' to 'specs'
+                    'filters' => array('search'),
+                    'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_featured_products',
+                    'label' => 'Featured Products',
+                    'name' => 'landing_featured_products',
+                    'type' => 'relationship',
+                    'instructions' => 'Select the featured products to display.',
+                    'post_type' => array('specs'),
+                    'filters' => array('search'),
+                    'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_footer_text',
+                    'label' => 'Footer Text',
+                    'name' => 'landing_footer_text',
+                    'type' => 'wysiwyg',
+                    'instructions' => 'Enter the footer text.',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'landing_page',
+                    ),
+                ),
+            ),
+        ));
+    }
+    
+}
+
+add_filter('acf/load_value/key=field_landing_footer_text', 'insert_html_into_footer_editor', 10, 3);
+function insert_html_into_footer_editor($value, $post_id, $field) {
+    if (is_admin()) {
+        $screen = get_current_screen();
+        if ($screen && $screen->post_type == 'landing_page') {
+            // Check if we are creating a new post or if the field is empty
+            if (get_post_status($post_id) == 'auto-draft' || empty($value)) {
+                // Define the path to the HTML file
+                $file_path = get_template_directory() . '/landing-page-footer-template.html';
+                
+                // Check if the file exists
+                if (file_exists($file_path)) {
+                    // Get the content of the file
+                    $value = trim(file_get_contents($file_path));
+                } 
+            }
+        }
+    }
+    return $value;
+}
+
+
+
+add_filter('acf/load_value/key=field_landing_header_text', 'insert_html_into_header_editor', 10, 3);
+function insert_html_into_header_editor($value, $post_id, $field) {
+    if (is_admin()) {
+        $screen = get_current_screen();
+        if ($screen && $screen->post_type == 'landing_page') {
+            // Check if we are creating a new post or if the field is empty
+            if (get_post_status($post_id) == 'auto-draft' || empty($value)) {
+                // Define the path to the HTML file
+                $file_path = get_template_directory() . '/landing-page-header-template.html';
+                
+                // Check if the file exists
+                if (file_exists($file_path)) {
+                    // Get the content of the file
+                    $value = trim(file_get_contents($file_path));
+                } 
+            }
+        }
+    }
+    return $value;
+}
+
+
+
+add_filter('wp_mail', 'custom_error_alert_email_recipients');
+
+function custom_error_alert_email_recipients($args) {
+    // Check if the email subject contains the error notification subject
+    if (strpos($args['subject'], '[Variscite] Your Site is Experiencing a Technical Issue') !== false) {
+        // Define the new recipients
+        $new_recipients = array('gregory.m@variscite.com','ayelet.o@variscite.com', 'lena.g@variscite.com'); // Replace with the desired email addresses
+        
+        // Update the 'to' field with new recipients
+        $args['to'] = implode(', ', $new_recipients);
+        
+        // Optional: Remove the 'Cc' and 'Bcc' fields if necessary
+        // $args['headers'] = array();
+    }
+
+    return $args;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,6 +5,7 @@ $fields = get_field_objects(get_the_ID());
 ?>
 
 <?php
+$is_spec_have_read_more = false;
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
@@ -107,9 +108,11 @@ if ( have_posts() ) {
                                 if( !empty(get_field('vrs_specs_product_middesc')) ) {
                                     $the_content = apply_filters('the_content', get_field('vrs_specs_product_middesc'));
                                     if (substr_count($the_content, '<!--more-->') == 1) {
+                                        $is_spec_have_read_more = true;
                                         $the_content = str_replace('<p><!--more--></p>', '<div class="read-more-wrap"><div class="read-more-button read-more">Read More</div><div class="read-more-text">', $the_content);
                                         echo $the_content . '</div><div class="read-more-button read-less">Read Less</div></div> <!-- end read-more-wrap -->';
                                     }else{
+
                                         echo $the_content;
                                     }
                                 } 
@@ -467,14 +470,14 @@ jQuery(function($) {
             if(ctxt == '') { thCount = thCount + 1; $(this).remove(); }
             $('.tab-pane#ordering_info thead th:first-child').attr('colspan', thCount);
         });
-
+        <?php if (!$is_spec_have_read_more): ?>
         /*************************************************
          ** Add read more to text
          *************************************************/
         var $contentContainer = $('.product-desc');
     var originalContent = $contentContainer.html(); // Store original HTML content
-    var sentenceLimit = 3; // Sentence limit after which "Read More" is added
-    var minCharLimit = 500; // Minimum character length for visible content
+    var sentenceLimit = 5; // Sentence limit after which "Read More" is added
+    var minCharLimit = 700; // Minimum character length for visible content
 
     // Function to truncate content after a specified number of sentences or minimum character limit
     function truncateContent(content, limit, minChars) {
@@ -544,7 +547,7 @@ jQuery(function($) {
         $contentContainer.html('<div class="visible-content">' + visible + '</div>');
     }
 
-
+    <?php endif; ?>
 
 
 
