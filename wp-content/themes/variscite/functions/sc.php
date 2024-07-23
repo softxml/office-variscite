@@ -352,7 +352,7 @@ function contact_form($atts) {
                                     <label for="product-1277118379">i.MX 8M Nano</label>
                                 </div>
                                 <div class="form-group">
-                                    <input type="checkbox" name="<?php printf('%s%s%s%s', $name_prefix, 'System__c', $name_suffix, (isset($_GET['noajax']) ? '[]' : '')); ?>" id="product-1277111620" value="i.MX 6UL / 6ULL" <?php echo (isset($_GET['noajax']) && isset($_POST['form_data']['System__c']) && in_array('i.MX 6UL / 6ULL', $_POST['form_data']['System__c']) ? 'checked' : ''); ?>>
+                                    <input type="checkbox" name="<?php printf('%s%s%s%s', $name_prefix, 'System__c', $name_suffix, (isset($_GET['noajax']) ? '[]' : '')); ?>" id="product-1277111620" value="i.MX 6UL 6ULL" <?php echo (isset($_GET['noajax']) && isset($_POST['form_data']['System__c']) && in_array('i.MX 6UL 6ULL', $_POST['form_data']['System__c']) ? 'checked' : ''); ?>>
                                     <label for="product-1277111620">i.MX 6UL / 6ULL</label>
                                 </div>
                                 <div class="form-group">

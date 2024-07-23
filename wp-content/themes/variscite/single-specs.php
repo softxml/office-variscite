@@ -475,79 +475,79 @@ jQuery(function($) {
          ** Add read more to text
          *************************************************/
         var $contentContainer = $('.product-desc');
-    var originalContent = $contentContainer.html(); // Store original HTML content
-    var sentenceLimit = 5; // Sentence limit after which "Read More" is added
-    var minCharLimit = 700; // Minimum character length for visible content
+        var originalContent = $contentContainer.html(); // Store original HTML content
+        var sentenceLimit = 5; // Sentence limit after which "Read More" is added
+        var minCharLimit = 700; // Minimum character length for visible content
 
-    // Function to truncate content after a specified number of sentences or minimum character limit
-    function truncateContent(content, limit, minChars) {
-        var tempDiv = $('<div>').html(content); // Create a temporary div to hold the content
-        var visibleContent = '';
-        var hiddenContent = '';
-        var sentenceCount = 0;
-        var charCount = 0;
+       
+        function truncateContent(content, limit, minChars) {
+            var tempDiv = $('<div>').html(content); 
+            var visibleContent = '';
+            var hiddenContent = '';
+            var sentenceCount = 0;
+            var charCount = 0;
 
-        // Enhanced regex to handle abbreviations and sentence endings
-        var sentenceRegex = /(?<!\b(?:[A-Z]\.|i\.|etc\.|e\.g\.|i\.e\.|vs\.|Mr\.|Mrs\.|Dr\.|Ms\.|Jr\.|Sr\.|Prof\.|St\.))(?<!\.\.\.)(?<!\w\.\w)(?<=\.|\?|!)\s/;
+            
+            var sentenceRegex = /(?<!\b(?:[A-Z]\.|i\.|etc\.|e\.g\.|i\.e\.|vs\.|Mr\.|Mrs\.|Dr\.|Ms\.|Jr\.|Sr\.|Prof\.|St\.))(?<!\.\.\.)(?<!\w\.\w)(?<=\.|\?|!)\s/;
 
-        tempDiv.contents().each(function() {
-            if (sentenceCount >= limit && charCount >= minChars) {
-                hiddenContent += $('<div>').append($(this).clone()).html();
-                return;
-            }
-
-            var nodeText = $(this).text();
-            var nodeHtml = $(this).prop('outerHTML');
-            var sentences = nodeText.split(sentenceRegex) || []; // Split text into sentences
-
-            for (var i = 0; i < sentences.length; i++) {
-                if (sentenceCount < limit || charCount < minChars) {
-                    visibleContent += sentences[i] + (i < sentences.length - 1 ? ' ' : '');
-                    charCount += sentences[i].length + 1; // Add 1 for the space or punctuation
-                    sentenceCount++;
-                } else {
-                    hiddenContent += sentences[i] + (i < sentences.length - 1 ? ' ' : '');
+            tempDiv.contents().each(function() {
+                if (sentenceCount >= limit && charCount >= minChars) {
+                    hiddenContent += $('<div>').append($(this).clone()).html();
+                    return;
                 }
-            }
-        });
 
-        return { visible: visibleContent, hidden: hiddenContent };
-    }
+                var nodeText = $(this).text();
+                var nodeHtml = $(this).prop('outerHTML');
+                var sentences = nodeText.split(sentenceRegex) || []; 
 
-    // Apply the function to the content
-    var { visible, hidden } = truncateContent(originalContent, sentenceLimit, minCharLimit);
+                for (var i = 0; i < sentences.length; i++) {
+                    if (sentenceCount < limit || charCount < minChars) {
+                        visibleContent += sentences[i] + (i < sentences.length - 1 ? ' ' : '');
+                        charCount += sentences[i].length + 1; 
+                        sentenceCount++;
+                    } else {
+                        hiddenContent += sentences[i] + (i < sentences.length - 1 ? ' ' : '');
+                    }
+                }
+            });
 
-    // Remove 'undefined' from the modified content (if any)
-    visible = visible.replace(/undefined/g, '');
-    hidden = hidden.replace(/undefined/g, '');
+            return { visible: visibleContent, hidden: hiddenContent };
+        }
 
-    // Check if there is hidden content to show
-    if (hidden.trim().length > 0) {
-        // Update the HTML of the container with truncated content and "Read More"
-        $contentContainer.html('<div class="visible-content">' + visible + '</div><div class="read-more-content" style="display:none;">' + hidden + '</div><a href="#" class="read-more">Read More</a>');
+        
+        var { visible, hidden } = truncateContent(originalContent, sentenceLimit, minCharLimit);
 
-        // Event listener for "Read More" and "Read Less"
-        $contentContainer.on('click', 'a.read-more', function(event) {
-            event.preventDefault();
-            var $readMoreLink = $(this);
-            var $readMoreContent = $readMoreLink.siblings('.read-more-content');
+       
+        visible = visible.replace(/undefined/g, '');
+        hidden = hidden.replace(/undefined/g, '');
 
-            // Toggle visibility of hidden content
-            $readMoreContent.toggle();
+        
+        if (hidden.trim().length > 0) {
+            
+            $contentContainer.html('<div class="visible-content">' + visible + '</div><div class="read-more-content" style="display:none;">' + hidden + '</div><a href="#" class="read-more">Read More</a>');
 
-            // Change text based on visibility
-            if ($readMoreContent.is(':visible')) {
-                $readMoreLink.text('Read Less');
-            } else {
-                $readMoreLink.text('Read More');
-            }
-        });
-    } else {
-        // If there's no hidden content, display the full content without "Read More"
-        $contentContainer.html('<div class="visible-content">' + visible + '</div>');
-    }
+            
+            $contentContainer.on('click', 'a.read-more', function(event) {
+                event.preventDefault();
+                var $readMoreLink = $(this);
+                var $readMoreContent = $readMoreLink.siblings('.read-more-content');
 
-    <?php endif; ?>
+                
+                $readMoreContent.toggle();
+
+                
+                if ($readMoreContent.is(':visible')) {
+                    $readMoreLink.text('Read Less');
+                } else {
+                    $readMoreLink.text('Read More');
+                }
+            });
+        } else {
+            
+            $contentContainer.html('<div class="visible-content">' + visible + '</div>');
+        }
+
+        <?php endif; ?>
 
 
 

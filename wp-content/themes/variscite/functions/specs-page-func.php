@@ -145,8 +145,8 @@ function specs_product_slider($pid){
  ** GET A QUOTE BUTTON GENERATOR
  *************************************************/
 function custom_getquote_btn($isit_kit, $store_inlink, $store_exlink, $button_text, $xclasses) {
-  
-
+   
+    
     if(empty($button_text)) {
         
         if ( $isit_kit && !empty($store_exlink) || $isit_kit && !empty($store_inlink)) {
@@ -171,7 +171,7 @@ function custom_getquote_btn($isit_kit, $store_inlink, $store_exlink, $button_te
        
     }
     
-
+    
     if( is_array( $store_inlink ) && isset( $store_inlink[0] ) && empty( $store_inlink[0] ) ){
         $store_inlink = false;
     }

@@ -506,7 +506,7 @@ function o_sctipts(){
     wp_enqueue_script('scripts.js' , get_stylesheet_directory_uri() . '/scripts.js', array('jquery') );
     wp_localize_script( 'scripts.js', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
     if (is_singular('landing_page')) {
-        wp_enqueue_style('landing-page-style', get_template_directory_uri() . '/css/landing-page-43.css', array(), '1.0.1');
+        wp_enqueue_style('landing-page-style', get_template_directory_uri() . '/css/landing-page-60.css', array(), '1.0.1');
     }
 }
 add_action( 'wp_enqueue_scripts', 'o_sctipts' );
@@ -738,55 +738,156 @@ add_filter( 'display_posts_shortcode_output', 'wrap_display_posts_with_container
 
 
 
+/*adding landing page price*/
+if( function_exists('acf_add_local_field_group') ):
 
-add_action('acf/init', 'add_custom_tab_with_plugin_content');
-
-function add_custom_tab_with_plugin_content() {
-    if (function_exists('acf_add_local_field_group')) {
-        $field_group_key = 'group_5a1b05f517f0b'; // Replace with your actual field group key
-
-        // Get the existing field group
-        $field_group = acf_get_field_group($field_group_key);
-        if ($field_group) {
-            // Get existing fields
-            $existing_fields = acf_get_fields($field_group_key);
-
-            // Define new fields
-            $new_fields = array(
-                array(
-                    'key' => 'field_lp_products',
-                    'label' => 'Landing Page Products',
-                    'type' => 'tab',
+    acf_add_local_field_group(array(
+        'key' => 'group_specs_page_product_settings',
+        'title' => 'Landing Page Product Price Settings',
+        'fields' => array(
+            array(
+                'key' => 'field_specs_page_product_tab',
+                'label' => 'Price Settings',
+                'name' => '',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ),
+            array(
+                'key' => 'field_specs_page_product_price',
+                'label' => 'Landing Page Product Price',
+                'name' => 'specs_page_product_price',
+                'type' => 'number',
+                'instructions' => 'Enter the price of the product for the landing page.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
                 ),
-                array(
-                    'key' => 'field_lp_products_content',
-                    'label' => 'Select products',
-                    'name' => 'custom_plugin_content',
-                    'type' => 'custom_plugin_content', // Custom field type
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '0.01',
+            ),
+            array(
+                'key' => 'field_specs_page_product_currency',
+                'label' => 'Currency',
+                'name' => 'specs_page_product_currency',
+                'type' => 'select',
+                'instructions' => 'Select the currency for the price.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'choices' => array(
+                    'USD' => 'USD',
+                    'EUR' => 'EUR',
+                    'GBP' => 'GBP',
+                    'CHF' => 'CHF',
+                    'NOK' => 'NOK',
+                    'SEK' => 'SEK',
+                    'DKK' => 'DKK',
+                    'ISK' => 'ISK',
+                    'PLN' => 'PLN',
+                    'CZK' => 'CZK',
+                    'HUF' => 'HUF',
+                    'RON' => 'RON',
+                    'BGN' => 'BGN',
+                    'HRK' => 'HRK',
+                    'RSD' => 'RSD',
+                    'BAM' => 'BAM',
+                    'MKD' => 'MKD',
+                    'TRY' => 'TRY',
+                    'RUB' => 'RUB',
+                    'UAH' => 'UAH',
+                    'ILS' => 'ILS', // Israeli Shekel
                 ),
-            );
+                'default_value' => 'USD',
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 1,
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'specs', // Change this to your custom post type
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+    
+    endif;
+    
+    
+    
 
-            // Merge new fields with existing fields
-            $fields = array_merge($existing_fields, $new_fields);
 
-            // Update the field group with new fields
-            acf_add_local_field_group(array(
-                'key' => $field_group_key,
-                'title' => $field_group['title'],
-                'fields' => $fields,
-                'location' => $field_group['location'],
-                'menu_order' => $field_group['menu_order'],
-                'position' => $field_group['position'],
-                'style' => $field_group['style'],
-                'label_placement' => $field_group['label_placement'],
-                'instruction_placement' => $field_group['instruction_placement'],
-                'hide_on_screen' => $field_group['hide_on_screen'],
-                'active' => $field_group['active'],
-                'description' => $field_group['description'],
-            ));
-        }
-    }
-}
+/*add landing page tab to specs page*/
+// add_action('acf/init', 'add_custom_tab_with_plugin_content');
+
+// function add_custom_tab_with_plugin_content() {
+//     if (function_exists('acf_add_local_field_group')) {
+//         $field_group_key = 'group_5a1b05f517f0b'; // Replace with your actual field group key
+
+//         // Get the existing field group
+//         $field_group = acf_get_field_group($field_group_key);
+//         if ($field_group) {
+//             // Get existing fields
+//             $existing_fields = acf_get_fields($field_group_key);
+
+//             // Define new fields
+//             $new_fields = array(
+//                 array(
+//                     'key' => 'field_lp_products',
+//                     'label' => 'Landing Page Products',
+//                     'type' => 'tab',
+//                 ),
+//                 array(
+//                     'key' => 'field_lp_products_content',
+//                     'label' => 'Select products',
+//                     'name' => 'custom_plugin_content',
+//                     'type' => 'custom_plugin_content', // Custom field type
+//                 ),
+//             );
+
+//             // Merge new fields with existing fields
+//             $fields = array_merge($existing_fields, $new_fields);
+
+//             // Update the field group with new fields
+//             acf_add_local_field_group(array(
+//                 'key' => $field_group_key,
+//                 'title' => $field_group['title'],
+//                 'fields' => $fields,
+//                 'location' => $field_group['location'],
+//                 'menu_order' => $field_group['menu_order'],
+//                 'position' => $field_group['position'],
+//                 'style' => $field_group['style'],
+//                 'label_placement' => $field_group['label_placement'],
+//                 'instruction_placement' => $field_group['instruction_placement'],
+//                 'hide_on_screen' => $field_group['hide_on_screen'],
+//                 'active' => $field_group['active'],
+//                 'description' => $field_group['description'],
+//             ));
+//         }
+//     }
+// }
 
 
 // add_action('acf/init', 'add_custom_tab_with_plugin_content');
@@ -931,6 +1032,7 @@ function register_custom_plugin_content_field() {
 //     register_post_type( 'custom_page', $args );
 // }
 // add_action( 'init', 'create_custom_post_type' );
+/*landing pages menu*/
 
 function create_landing_page_post_type() {
     register_post_type('landing_page',
@@ -946,10 +1048,53 @@ function create_landing_page_post_type() {
             'show_in_rest' => true,
         )
     );
+    
 }
 add_action('init', 'create_landing_page_post_type');
 
 
+// function custom_error_handler($errno, $errstr, $errfile, $errline) {
+//     // Check if the error is a critical error
+//     if (error_reporting() === 0) {
+//         return false; // Error was suppressed with the @-operator
+//     }
+
+//     $message = "A critical error occurred on your website:\n\n";
+//     $message .= "Error: [$errno] $errstr\n";
+//     $message .= "File: $errfile\n";
+//     $message .= "Line: $errline\n";
+//     $message .= "\nPlease check your site for issues.";
+
+//     // Define additional recipients
+//     $additional_emails = 'gregory.m@variscite.com';
+
+//     // Send the email
+//     wp_mail($additional_emails, 'Critical Error on Your Website', $message);
+
+//     return true;
+// }
+
+// set_error_handler('custom_error_handler');
+
+// function custom_exception_handler($exception) {
+//     $message = "An uncaught exception occurred on your website:\n\n";
+//     $message .= "Exception: " . $exception->getMessage() . "\n";
+//     $message .= "File: " . $exception->getFile() . "\n";
+//     $message .= "Line: " . $exception->getLine() . "\n";
+//     $message .= "\nPlease check your site for issues.";
+
+//     // Define additional recipients
+//     $additional_emails = 'your.email@example.com';
+
+//     // Send the email
+//     wp_mail($additional_emails, 'Uncaught Exception on Your Website', $message);
+// }
+
+// set_exception_handler('custom_exception_handler');
+
+
+
+// trigger_error("Test critical error", E_USER_ERROR);
 
 add_action('acf/init', 'register_landing_page_fields');
 
@@ -960,44 +1105,53 @@ function register_landing_page_fields() {
             'title' => 'Landing Page Settings',
             'fields' => array(
                 array(
-                    'key' => 'field_landing_header_image',
-                    'label' => 'Header Image',
-                    'name' => 'landing_header_image',
-                    'type' => 'image',
-                    'instructions' => 'Upload the header image.',
-                    'return_format' => 'url',
-                    'preview_size' => 'medium',
-                    'library' => 'all',
-                ),
-                array(
-                    'key' => 'field_landing_images_repeater',
-                    'label' => 'Compliance Icons',
-                    'name' => 'landing_images_repeater',
-                    'type' => 'repeater',
-                    'instructions' => 'Upload / Pick relevant compliance logos',
+                    'key' => 'field_header_group',
+                    'label' => 'Header Settings',
+                    'name' => 'header_group',
+                    'type' => 'group',
+                    'instructions' => '',
                     'sub_fields' => array(
                         array(
-                            'key' => 'field_compliance_icon',
-                            'label' => 'Compliance Icon',
-                            'name' => 'compliance_icon',
+                            'key' => 'field_landing_header_image',
+                            'label' => 'Header Image',
+                            'name' => 'landing_header_image',
                             'type' => 'image',
-                            'instructions' => 'Upload the Compliance Icon.',
+                            'instructions' => 'Upload the header image.',
                             'return_format' => 'url',
                             'preview_size' => 'medium',
                             'library' => 'all',
                         ),
+                        array(
+                            'key' => 'field_landing_header_text',
+                            'label' => 'Header Text',
+                            'name' => 'landing_header_text',
+                            'type' => 'wysiwyg',
+                            'instructions' => 'Enter the header text.',
+                        ),
+                        array(
+                            'key' => 'field_landing_images_repeater',
+                            'label' => 'Compliance Icons',
+                            'name' => 'landing_images_repeater',
+                            'type' => 'repeater',
+                            'instructions' => 'Upload / Pick relevant compliance logos',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_compliance_icon',
+                                    'label' => 'Compliance Icon',
+                                    'name' => 'compliance_icon',
+                                    'type' => 'image',
+                                    'instructions' => 'Upload the Compliance Icon.',
+                                    'return_format' => 'url',
+                                    'preview_size' => 'medium',
+                                    'library' => 'all',
+                                ),
+                            ),
+                            'min' => 0,
+                            'max' => 10,
+                            'layout' => 'table',
+                            'button_label' => 'Add Icon',
+                        ),
                     ),
-                    'min' => 1,
-                    'max' => 10,
-                    'layout' => 'table',
-                    'button_label' => 'Add Icon',
-                ),
-                array(
-                    'key' => 'field_landing_header_text',
-                    'label' => 'Header Text',
-                    'name' => 'landing_header_text',
-                    'type' => 'wysiwyg',
-                    'instructions' => 'Enter the header text.',
                 ),
                 array(
                     'key' => 'field_landing_selected_specs',
@@ -1005,7 +1159,7 @@ function register_landing_page_fields() {
                     'name' => 'landing_selected_specs',
                     'type' => 'relationship',
                     'instructions' => 'Select the specs pages to display.',
-                    'post_type' => array('specs'), // Change 'product' to 'specs'
+                    'post_type' => array('specs'),
                     'filters' => array('search'),
                     'return_format' => 'object',
                 ),
@@ -1019,6 +1173,50 @@ function register_landing_page_fields() {
                     'filters' => array('search'),
                     'return_format' => 'object',
                 ),
+                array(
+                    'key' => 'field_landing_latest_soms_tab',
+                    'label' => 'Latest SOMs',
+                    'name' => '',
+                    'type' => 'tab',
+                    'placement' => 'top',
+                    'endpoint' => 0,
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_image',
+                    'label' => 'Latest SOMs Image',
+                    'name' => 'latest_soms_image',
+                    'type' => 'image',
+                    'instructions' => 'Upload the latest SOMs image.',
+                    'return_format' => 'url',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_title',
+                    'label' => 'Latest SOMs Title',
+                    'name' => 'latest_soms_title',
+                    'type' => 'text',
+                    'instructions' => 'Enter the title for the latest SOMs.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_products',
+                    'label' => 'Latest SOMs Products',
+                    'name' => 'latest_soms_products',
+                    'type' => 'relationship',
+                    'instructions' => 'Select the latest SOMs products to display.',
+                    'post_type' => array('specs'), // Change 'product' to your custom post type if different
+                    'filters' => array('search'),
+                    'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_url',
+                    'label' => 'Latest SOMs URL',
+                    'name' => 'latest_soms_url',
+                    'type' => 'text',
+                    'instructions' => 'Enter the URL for more information about the latest SOMs.',
+                    
+                ),
+                
                 array(
                     'key' => 'field_landing_footer_text',
                     'label' => 'Footer Text',
@@ -1037,53 +1235,81 @@ function register_landing_page_fields() {
                 ),
             ),
         ));
+        
     }
     
 }
 
-add_filter('acf/load_value/key=field_landing_footer_text', 'insert_html_into_footer_editor', 10, 3);
-function insert_html_into_footer_editor($value, $post_id, $field) {
-    if (is_admin()) {
-        $screen = get_current_screen();
-        if ($screen && $screen->post_type == 'landing_page') {
-            // Check if we are creating a new post or if the field is empty
-            if (get_post_status($post_id) == 'auto-draft' || empty($value)) {
-                // Define the path to the HTML file
-                $file_path = get_template_directory() . '/landing-page-footer-template.html';
-                
-                // Check if the file exists
-                if (file_exists($file_path)) {
-                    // Get the content of the file
-                    $value = trim(file_get_contents($file_path));
-                } 
-            }
-        }
+
+
+// Callback function for the Landing Page Settings submenu
+function landing_page_settings_page() {
+    ?>
+    <div class="wrap">
+        <h1><?php _e('Landing Page Settings', 'textdomain'); ?></h1>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('landing_page_settings_group');
+            do_settings_sections('landing-page-settings');
+            submit_button();
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+add_filter('acf/load_value/name=latest_soms_url', 'set_default_soms_url', 10, 3);
+function set_default_soms_url($value, $post_id, $field) {
+    if (empty($value)) {
+        return home_url('/products/system-on-module-som/');
     }
     return $value;
 }
 
-
-
-add_filter('acf/load_value/key=field_landing_header_text', 'insert_html_into_header_editor', 10, 3);
-function insert_html_into_header_editor($value, $post_id, $field) {
-    if (is_admin()) {
-        $screen = get_current_screen();
-        if ($screen && $screen->post_type == 'landing_page') {
-            // Check if we are creating a new post or if the field is empty
-            if (get_post_status($post_id) == 'auto-draft' || empty($value)) {
-                // Define the path to the HTML file
-                $file_path = get_template_directory() . '/landing-page-header-template.html';
+/**landing page footer text*/
+// add_filter('acf/load_value/key=field_landing_footer_text', 'insert_html_into_footer_editor', 10, 3);
+// function insert_html_into_footer_editor($value, $post_id, $field) {
+//     if (is_admin()) {
+//         $screen = get_current_screen();
+//         if ($screen && $screen->post_type == 'landing_page') {
+//             // Check if we are creating a new post or if the field is empty
+//             if (get_post_status($post_id) == 'auto-draft' || empty($value)) {
+//                 // Define the path to the HTML file
+//                 $file_path = get_template_directory() . '/landing-page-footer-template.html';
                 
-                // Check if the file exists
-                if (file_exists($file_path)) {
-                    // Get the content of the file
-                    $value = trim(file_get_contents($file_path));
-                } 
-            }
-        }
-    }
-    return $value;
-}
+//                 // Check if the file exists
+//                 if (file_exists($file_path)) {
+//                     // Get the content of the file
+//                     $value = trim(file_get_contents($file_path));
+//                 } 
+//             }
+//         }
+//     }
+//     return $value;
+// }
+
+
+/* landing_header_text */
+// add_filter('acf/load_value/key=field_landing_header_text', 'insert_html_into_header_editor', 10, 3);
+// function insert_html_into_header_editor($value, $post_id, $field) {
+//     if (is_admin()) {
+//         $screen = get_current_screen();
+//         if ($screen && $screen->post_type == 'landing_page') {
+//             // Check if we are creating a new post or if the field is empty
+//             if (get_post_status($post_id) == 'auto-draft' || empty($value)) {
+//                 // Define the path to the HTML file
+//                 $file_path = get_template_directory() . '/landing-page-header-template.html';
+                
+//                 // Check if the file exists
+//                 if (file_exists($file_path)) {
+//                     // Get the content of the file
+//                     $value = trim(file_get_contents($file_path));
+//                 } 
+//             }
+//         }
+//     }
+//     return $value;
+// }
 
 
 
@@ -1104,6 +1330,221 @@ function custom_error_alert_email_recipients($args) {
 
     return $args;
 }
+
+/*add landing page settings menu*/
+
+// Add custom menu and submenus to the admin dashboard
+function add_settings_menu() {
+    add_submenu_page(
+        'edit.php?post_type=landing_page',
+        __('Settings', 'textdomain'),
+       
+        'manage_options',
+        'landing-page-settings',
+        'landing_page_settings_page_new'
+    );
+}
+add_action('admin_menu', 'add_settings_menu');
+
+// Callback function for the Landing Page Settings submenu
+function landing_page_settings_page_new() {
+    ?>
+    <div class="wrap">
+        <h1><?php _e('Landing Page Settings', 'textdomain'); ?></h1>
+        <?php
+        acf_form(array(
+            'post_id' => 'options',
+            'field_groups' => array('group_landing_page_settings'), // The key of your ACF field group
+            'submit_value' => __('Save Settings', 'textdomain')
+        ));
+        ?>
+    </div>
+    <?php
+}
+
+add_action('acf/init', 'register_landing_page_fields_new');
+
+function register_landing_page_fields_new() {
+    if (function_exists('acf_add_local_field_group')) {
+        acf_add_local_field_group(array(
+            'key' => 'group_landing_page_settings',
+            'title' => 'Landing Page Settings',
+            'fields' => array(
+                array(
+                    'key' => 'field_header_group_settings',
+                    'label' => 'Header Settings',
+                    'name' => 'header_group_settings',
+                    'type' => 'group',
+                    'instructions' => '',
+                    'sub_fields' => array(
+                        array(
+                            'key' => 'field_landing_header_image_settings',
+                            'label' => 'Header Image',
+                            'name' => 'landing_header_image_settings',
+                            'type' => 'image',
+                            'instructions' => 'Upload the header image.',
+                            'return_format' => 'url',
+                            'preview_size' => 'medium',
+                            'library' => 'all',
+                        ),
+                        array(
+                            'key' => 'field_landing_header_text_settings',
+                            'label' => 'Header Text',
+                            'name' => 'landing_header_text_settings',
+                            'type' => 'wysiwyg',
+                            'instructions' => 'Enter the header text.',
+                        ),
+                        array(
+                            'key' => 'field_landing_images_repeater_settings',
+                            'label' => 'Compliance Icons',
+                            'name' => 'landing_images_repeater_settings',
+                            'type' => 'repeater',
+                            'instructions' => 'Upload / Pick relevant compliance logos',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_compliance_icon_settings',
+                                    'label' => 'Compliance Icon',
+                                    'name' => 'compliance_icon',
+                                    'type' => 'image',
+                                    'instructions' => 'Upload the Compliance Icon.',
+                                    'return_format' => 'url',
+                                    'preview_size' => 'medium',
+                                    'library' => 'all',
+                                ),
+                            ),
+                            'min' => 0,
+                            'max' => 10,
+                            'layout' => 'table',
+                            'button_label' => 'Add Icon',
+                        ),
+                    ),
+                ),
+                array(
+                    'key' => 'field_landing_selected_specs_settings',
+                    'label' => 'Selected Products',
+                    'name' => 'landing_selected_specs_settings',
+                    'type' => 'relationship',
+                    'instructions' => 'Select the specs to display.',
+                    'post_type' => array('specs'),
+                    'filters' => array('search'),
+                    'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_featured_specs_settings',
+                    'label' => 'Featured Products',
+                    'name' => 'landing_featured_specs_settings',
+                    'type' => 'relationship',
+                    'instructions' => 'Select the featured specs to display.',
+                    'post_type' => array('specs'),
+                    'filters' => array('search'),
+                    'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_tab_settings',
+                    'label' => 'Latest SOMs',
+                    'name' => '',
+                    'type' => 'tab',
+                    'placement' => 'top',
+                    'endpoint' => 0,
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_image_settings',
+                    'label' => 'Latest SOMs Image',
+                    'name' => 'latest_soms_image_settings',
+                    'type' => 'image',
+                    'instructions' => 'Upload the latest SOMs image.',
+                    'return_format' => 'url',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_title_settings',
+                    'label' => 'Latest SOMs Title',
+                    'name' => 'latest_soms_title_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the title for the latest SOMs.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_products_settings',
+                    'label' => 'Latest SOMs Products',
+                    'name' => 'latest_soms_products_settings',
+                    'type' => 'relationship',
+                    'instructions' => 'Select the latest SOMs products to display.',
+                    'post_type' => array('specs'), // Change 'product' to your custom post type if different
+                    'filters' => array('search'),
+                    'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_url_settings',
+                    'label' => 'Latest SOMs URL',
+                    'name' => 'latest_soms_url_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the URL for more information about the latest SOMs.',
+                    
+                ),
+                array(
+                    'key' => 'field_landing_contact_text_settings',
+                    'label' => 'Contact Us Form',
+                    'name' => 'landing_contact_text_settings',
+                    'type' => 'wysiwyg',
+                    'instructions' => 'Don`t change this code',
+                ),
+                array(
+                    'key' => 'field_landing_footer_text_settings',
+                    'label' => 'Footer Text',
+                    'name' => 'landing_footer_text_settings',
+                    'type' => 'wysiwyg',
+                    'instructions' => 'Enter the footer text.',
+                ),
+                
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'landing-page-settings',
+                    ),
+                ),
+            ),
+        ));
+    }
+}
+
+if (function_exists('acf_add_options_sub_page')) {
+    acf_add_options_sub_page(array(
+        'page_title' => __('Landing Page Settings'),
+        'menu_title' => __('Settings'),
+        'menu_slug' => 'landing-page-settings',
+        'parent_slug' => 'edit.php?post_type=landing_page',
+        'capability' => 'manage_options',
+        'redirect' => false
+    ));
+}
+
+
+function change_landing_page_submenu_label() {
+    global $submenu;
+    if (isset($submenu['edit.php?post_type=landing_page'][5])) {
+        $submenu['edit.php?post_type=landing_page'][5][0] = __('All Pages', 'textdomain');
+    }
+    if (isset($submenu['edit.php?post_type=landing_page'][10])) {
+        $submenu['edit.php?post_type=landing_page'][10][0] = __('Add New Page', 'textdomain');
+    }
+}
+add_action('admin_menu', 'change_landing_page_submenu_label', 999);
+
+
+// function list_all_taxonomies() {
+//     $taxonomies = get_taxonomies(array(), 'objects');
+
+//     foreach ($taxonomies as $taxonomy) {
+//         echo '<strong>' . $taxonomy->label . '</strong> (' . $taxonomy->name . ')<br>';
+//     }
+// }
+// add_action('admin_notices', 'list_all_taxonomies');
+
+
 
 
 
