@@ -993,8 +993,8 @@ function contact_form_func($atts) {
 
 /* contact form shortcode */
 add_shortcode( 'contact_form_inline', 'contact_form_inline_func' );
-function contact_form_inline_func() {
-
+function contact_form_inline_func($atts) {
+    $islp=false;
     $output = '';
 
     $output .='<div id="quoteFormWidget" class="quote-form lpForm som-form contact-form-inline" style="border-color: #000000;  ">';
@@ -1018,8 +1018,42 @@ function contact_form_inline_func() {
 
             <!--=== ADWORDS FIELDS ===-->';
 
-    $output .='<div class="form-inner">
-                <div class="row">';
+    $output .='<div class="form-inner">';
+    if (isset($atts['fromlp']) && $atts['fromlp']) {
+        $islp=true;
+        if (defined('ICL_LANGUAGE_CODE')) {
+            $current_language = ICL_LANGUAGE_CODE;
+        } else {
+            // Fallback method to get the current language
+            $current_language = apply_filters('wpml_current_language', NULL);
+        }
+        
+        // Initialize the variable to hold the "Contact Us" sentence
+        $contact_us_sentence = "";
+        
+        // Set the "Contact Us" sentence based on the current language
+        switch ($current_language) {
+            case 'en':
+                $contact_us_sentence = "Contact Us";
+                break;
+            case 'de':
+                $contact_us_sentence = "Kontakt";
+                break;
+            case 'it':
+                $contact_us_sentence = "Contatti";
+                break;
+            default:
+                // Default to English if the language is not one of the specified ones
+                $contact_us_sentence = "Contact Us";
+                break;
+        }
+        
+        // Output the contact us sentence (for demonstration purposes)
+        
+
+        $output .= '<div class="row_fromlp">' . $contact_us_sentence  . '</div>';
+    }
+    $output .='<div class="row">';
     $output .= '
                     <div class="col-md-6 field-box form-group field-first_name floating-labels col-md-6">
                         <div class="field-wrap">
@@ -1095,7 +1129,11 @@ function contact_form_inline_func() {
 
                     <div class="submit-box col-md-12">
                         <div class="notice"></div>
-                        <div class="text-right"><input type="submit" name="submit" class="btn btn-warning btn-lg btn-arrow-01 submitQuoteWidgetRequest" value="'.__('Send', 'variscite_lp').'"></div>
+                        <div class="text-right"><input type="submit" name="submit" class="btn btn-warning ';
+                        if($islp) {
+                            $output .= 'short ';
+                        }
+                        $output .= 'btn-lg btn-arrow-01 submitQuoteWidgetRequest" value="'.__('Send', 'variscite_lp').'"></div>
                     </div><!-- submit-box-->
                 
     ';

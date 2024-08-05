@@ -506,7 +506,7 @@ function o_sctipts(){
     wp_enqueue_script('scripts.js' , get_stylesheet_directory_uri() . '/scripts.js', array('jquery') );
     wp_localize_script( 'scripts.js', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
     if (is_singular('landing_page')) {
-        wp_enqueue_style('landing-page-style', get_template_directory_uri() . '/css/landing-page-60.css', array(), '1.0.1');
+        wp_enqueue_style('landing-page-style', get_template_directory_uri() . '/css/landing-page-dev.css', array(), '1.0.1');
     }
 }
 add_action( 'wp_enqueue_scripts', 'o_sctipts' );
@@ -609,7 +609,7 @@ add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function () {
 
 function custom_display_posts_output( $output, $original_atts, $image, $title, $date, $excerpt, $inner_wrapper, $content, $class ) {
     global $post;
-
+    
     // Get the post thumbnail
     $image = get_the_post_thumbnail( $post->ID, 'large' );
 
@@ -739,101 +739,108 @@ add_filter( 'display_posts_shortcode_output', 'wrap_display_posts_with_container
 
 
 /*adding landing page price*/
-if( function_exists('acf_add_local_field_group') ):
+// if( function_exists('acf_add_local_field_group') ):
 
-    acf_add_local_field_group(array(
-        'key' => 'group_specs_page_product_settings',
-        'title' => 'Landing Page Product Price Settings',
-        'fields' => array(
-            array(
-                'key' => 'field_specs_page_product_tab',
-                'label' => 'Price Settings',
-                'name' => '',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0,
-            ),
-            array(
-                'key' => 'field_specs_page_product_price',
-                'label' => 'Landing Page Product Price',
-                'name' => 'specs_page_product_price',
-                'type' => 'number',
-                'instructions' => 'Enter the price of the product for the landing page.',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'min' => '',
-                'max' => '',
-                'step' => '0.01',
-            ),
-            array(
-                'key' => 'field_specs_page_product_currency',
-                'label' => 'Currency',
-                'name' => 'specs_page_product_currency',
-                'type' => 'select',
-                'instructions' => 'Select the currency for the price.',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'choices' => array(
-                    'USD' => 'USD',
-                    'EUR' => 'EUR',
-                    'GBP' => 'GBP',
-                    'CHF' => 'CHF',
-                    'NOK' => 'NOK',
-                    'SEK' => 'SEK',
-                    'DKK' => 'DKK',
-                    'ISK' => 'ISK',
-                    'PLN' => 'PLN',
-                    'CZK' => 'CZK',
-                    'HUF' => 'HUF',
-                    'RON' => 'RON',
-                    'BGN' => 'BGN',
-                    'HRK' => 'HRK',
-                    'RSD' => 'RSD',
-                    'BAM' => 'BAM',
-                    'MKD' => 'MKD',
-                    'TRY' => 'TRY',
-                    'RUB' => 'RUB',
-                    'UAH' => 'UAH',
-                    'ILS' => 'ILS', // Israeli Shekel
-                ),
-                'default_value' => 'USD',
-                'allow_null' => 0,
-                'multiple' => 0,
-                'ui' => 1,
-                'return_format' => 'value',
-                'ajax' => 0,
-                'placeholder' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'specs', // Change this to your custom post type
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => 1,
-        'description' => '',
-    ));
+//     acf_add_local_field_group(array(
+//         'key' => 'group_specs_page_product_settings',
+//         'title' => 'Landing Page Product Price Settings',
+//         'fields' => array(
+//             array(
+//                 'key' => 'field_specs_page_product_tab',
+//                 'label' => 'Price Settings',
+//                 'name' => '',
+//                 'type' => 'tab',
+//                 'placement' => 'top',
+//                 'endpoint' => 0,
+//             ),
+//             array(
+//                 'key' => 'field_specs_page_product_price_text',
+//                 'label' => 'Product price text',
+//                 'name' => 'specs_page_product_price_text',
+//                 'type' => 'text',
+//                 'instructions' => 'Enter the title for the price.',
+//             ),
+//             array(
+//                 'key' => 'field_specs_page_product_price',
+//                 'label' => 'Landing Page Product Price',
+//                 'name' => 'specs_page_product_price',
+//                 'type' => 'number',
+//                 'instructions' => 'Enter the price of the product for the landing page.',
+//                 'required' => 0,
+//                 'conditional_logic' => 0,
+//                 'wrapper' => array(
+//                     'width' => '',
+//                     'class' => '',
+//                     'id' => '',
+//                 ),
+//                 'default_value' => '',
+//                 'placeholder' => '',
+//                 'prepend' => '',
+//                 'append' => '',
+//                 'min' => '',
+//                 'max' => '',
+//                 'step' => '0.01',
+//             ),
+//             array(
+//                 'key' => 'field_specs_page_product_currency',
+//                 'label' => 'Currency',
+//                 'name' => 'specs_page_product_currency',
+//                 'type' => 'select',
+//                 'instructions' => 'Select the currency for the price.',
+//                 'required' => 0,
+//                 'conditional_logic' => 0,
+//                 'choices' => array(
+//                     'USD' => 'USD',
+//                     'EUR' => 'EUR',
+//                     'GBP' => 'GBP',
+//                     'CHF' => 'CHF',
+//                     'NOK' => 'NOK',
+//                     'SEK' => 'SEK',
+//                     'DKK' => 'DKK',
+//                     'ISK' => 'ISK',
+//                     'PLN' => 'PLN',
+//                     'CZK' => 'CZK',
+//                     'HUF' => 'HUF',
+//                     'RON' => 'RON',
+//                     'BGN' => 'BGN',
+//                     'HRK' => 'HRK',
+//                     'RSD' => 'RSD',
+//                     'BAM' => 'BAM',
+//                     'MKD' => 'MKD',
+//                     'TRY' => 'TRY',
+//                     'RUB' => 'RUB',
+//                     'UAH' => 'UAH',
+//                     'ILS' => 'ILS', // Israeli Shekel
+//                 ),
+//                 'default_value' => 'USD',
+//                 'allow_null' => 0,
+//                 'multiple' => 0,
+//                 'ui' => 1,
+//                 'return_format' => 'value',
+//                 'ajax' => 0,
+//                 'placeholder' => '',
+//             ),
+//         ),
+//         'location' => array(
+//             array(
+//                 array(
+//                     'param' => 'post_type',
+//                     'operator' => '==',
+//                     'value' => 'specs', // Change this to your custom post type
+//                 ),
+//             ),
+//         ),
+//         'menu_order' => 0,
+//         'position' => 'normal',
+//         'style' => 'default',
+//         'label_placement' => 'top',
+//         'instruction_placement' => 'label',
+//         'hide_on_screen' => '',
+//         'active' => 1,
+//         'description' => '',
+//     ));
     
-    endif;
+//     endif;
     
     
     
@@ -1024,9 +1031,9 @@ function register_custom_plugin_content_field() {
 //         'labels' => $labels,
 //         'public' => true,
 //         'has_archive' => true,
-//         'show_in_rest' => true, // Enable Gutenberg editor
-//         'supports' => array( 'title', 'editor', 'thumbnail' ), // Add more as needed
-//         'rewrite' => array( 'slug' => 'custom-page' ),
+//         'show_in_rest' => true, // Ee', 'editor', 'thumbnail' ), // Add more as needed
+//         'rewrite' => array( 'slug'nable Gutenberg editor
+//         'supports' => array( 'titl => 'custom-page' ),
 //     );
 
 //     register_post_type( 'custom_page', $args );
@@ -1046,6 +1053,7 @@ function create_landing_page_post_type() {
             'rewrite' => array('slug' => 'landing-pages'),
             'supports' => array('title', 'editor', 'thumbnail'),
             'show_in_rest' => true,
+            'menu_icon' => 'dashicons-format-aside'
         )
     );
     
@@ -1153,16 +1161,7 @@ function register_landing_page_fields() {
                         ),
                     ),
                 ),
-                array(
-                    'key' => 'field_landing_selected_specs',
-                    'label' => 'Selected Specs Pages',
-                    'name' => 'landing_selected_specs',
-                    'type' => 'relationship',
-                    'instructions' => 'Select the specs pages to display.',
-                    'post_type' => array('specs'),
-                    'filters' => array('search'),
-                    'return_format' => 'object',
-                ),
+                
                 array(
                     'key' => 'field_landing_featured_products',
                     'label' => 'Featured Products',
@@ -1172,6 +1171,13 @@ function register_landing_page_fields() {
                     'post_type' => array('specs'),
                     'filters' => array('search'),
                     'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_product_info',
+                    'label' => 'Product Info Text',
+                    'name' => 'landing_product_info',
+                    'type' => 'text',
+                    'instructions' => 'Enter the translation for product button text.',
                 ),
                 array(
                     'key' => 'field_landing_latest_soms_tab',
@@ -1191,6 +1197,7 @@ function register_landing_page_fields() {
                     'preview_size' => 'medium',
                     'library' => 'all',
                 ),
+
                 array(
                     'key' => 'field_landing_latest_soms_title',
                     'label' => 'Latest SOMs Title',
@@ -1198,15 +1205,34 @@ function register_landing_page_fields() {
                     'type' => 'text',
                     'instructions' => 'Enter the title for the latest SOMs.',
                 ),
+                
                 array(
-                    'key' => 'field_landing_latest_soms_products',
-                    'label' => 'Latest SOMs Products',
-                    'name' => 'latest_soms_products',
-                    'type' => 'relationship',
-                    'instructions' => 'Select the latest SOMs products to display.',
-                    'post_type' => array('specs'), // Change 'product' to your custom post type if different
-                    'filters' => array('search'),
-                    'return_format' => 'object',
+                    'key' => 'field_landing_latest_soms_product_1',
+                    'label' => 'Latest SOMs Product 1',
+                    'name' => 'latest_soms_product_1',
+                    'type' => 'text',
+                    'instructions' => 'Enter the first SOMs product name.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_product_2',
+                    'label' => 'Latest SOMs Product 2',
+                    'name' => 'latest_soms_product_2',
+                    'type' => 'text',
+                    'instructions' => 'Enter the second SOMs product name.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_product_3',
+                    'label' => 'Latest SOMs Product 3',
+                    'name' => 'latest_soms_product_3',
+                    'type' => 'text',
+                    'instructions' => 'Enter the third SOMs product name.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_more_info',
+                    'label' => 'More Info Link',
+                    'name' => 'latest_soms_more_info',
+                    'type' => 'text',
+                    'instructions' => 'Enter the translation.',
                 ),
                 array(
                     'key' => 'field_landing_latest_soms_url',
@@ -1419,16 +1445,7 @@ function register_landing_page_fields_new() {
                         ),
                     ),
                 ),
-                array(
-                    'key' => 'field_landing_selected_specs_settings',
-                    'label' => 'Selected Products',
-                    'name' => 'landing_selected_specs_settings',
-                    'type' => 'relationship',
-                    'instructions' => 'Select the specs to display.',
-                    'post_type' => array('specs'),
-                    'filters' => array('search'),
-                    'return_format' => 'object',
-                ),
+                
                 array(
                     'key' => 'field_landing_featured_specs_settings',
                     'label' => 'Featured Products',
@@ -1438,6 +1455,13 @@ function register_landing_page_fields_new() {
                     'post_type' => array('specs'),
                     'filters' => array('search'),
                     'return_format' => 'object',
+                ),
+                array(
+                    'key' => 'field_landing_product_info_settings',
+                    'label' => 'Product Info Text',
+                    'name' => 'landing_product_info_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the translation for product button text.',
                 ),
                 array(
                     'key' => 'field_landing_latest_soms_tab_settings',
@@ -1464,15 +1488,34 @@ function register_landing_page_fields_new() {
                     'type' => 'text',
                     'instructions' => 'Enter the title for the latest SOMs.',
                 ),
+                
                 array(
-                    'key' => 'field_landing_latest_soms_products_settings',
-                    'label' => 'Latest SOMs Products',
-                    'name' => 'latest_soms_products_settings',
-                    'type' => 'relationship',
-                    'instructions' => 'Select the latest SOMs products to display.',
-                    'post_type' => array('specs'), // Change 'product' to your custom post type if different
-                    'filters' => array('search'),
-                    'return_format' => 'object',
+                    'key' => 'field_landing_latest_soms_product_1_settings',
+                    'label' => 'Latest SOMs Product 1',
+                    'name' => 'latest_soms_product_1_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the first SOMs product name.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_product_2_settings',
+                    'label' => 'Latest SOMs Product 2',
+                    'name' => 'latest_soms_product_2_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the second SOMs product name.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_product_3_settings',
+                    'label' => 'Latest SOMs Product 3',
+                    'name' => 'latest_soms_product_3_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the third SOMs product name.',
+                ),
+                array(
+                    'key' => 'field_landing_latest_soms_more_info_settings',
+                    'label' => 'More Info Link',
+                    'name' => 'latest_soms_more_info_settings',
+                    'type' => 'text',
+                    'instructions' => 'Enter the translation.',
                 ),
                 array(
                     'key' => 'field_landing_latest_soms_url_settings',
@@ -1482,13 +1525,7 @@ function register_landing_page_fields_new() {
                     'instructions' => 'Enter the URL for more information about the latest SOMs.',
                     
                 ),
-                array(
-                    'key' => 'field_landing_contact_text_settings',
-                    'label' => 'Contact Us Form',
-                    'name' => 'landing_contact_text_settings',
-                    'type' => 'wysiwyg',
-                    'instructions' => 'Don`t change this code',
-                ),
+                
                 array(
                     'key' => 'field_landing_footer_text_settings',
                     'label' => 'Footer Text',
@@ -1543,6 +1580,79 @@ add_action('admin_menu', 'change_landing_page_submenu_label', 999);
 //     }
 // }
 // add_action('admin_notices', 'list_all_taxonomies');
+
+// Hook to register ACF fields with WPML
+add_action('init', 'register_acf_fields_with_wpml');
+
+function register_acf_fields_with_wpml() {
+    if (function_exists('icl_register_string')) {
+        $fields = [
+            'landing_header_text' => 'Landing Page Header Text',
+            'landing_footer_text' => 'Landing Page Footer Text'
+        ];
+
+        foreach ($fields as $field_key => $field_label) {
+            // Registering the field key for translation in options
+            $option_key = $field_key . '_settings';
+            $field_value_option = get_field($option_key, 'option');
+            if ($field_value_option) {
+                icl_register_string('Landing Page', $field_label . ' (Option)', $field_value_option);
+            }
+
+            // Registering the field key for translation in post meta
+            // Fetching all posts to register their meta fields
+            $args = array(
+                'post_type' => 'any',
+                'posts_per_page' => -1,
+                'meta_key' => $field_key,
+                'fields' => 'ids'
+            );
+            $posts = get_posts($args);
+            foreach ($posts as $post_id) {
+                $field_value_post_meta = get_post_meta($post_id, $field_key, true);
+                if ($field_value_post_meta) {
+                    icl_register_string('Landing Page', $field_label . ' (Post Meta) for Post ID ' . $post_id, $field_value_post_meta);
+                }
+            }
+        }
+    }
+}
+
+// Ensure ACF fields are translatable in WPML settings
+add_filter('wpml_config_array', function($wpml_config) {
+    $wpml_config['custom-fields'] = [
+        'landing_header_text' => ['translate' => 1],
+        'landing_footer_text' => ['translate' => 1],
+        'landing_header_text_settings' => ['translate' => 1],
+        'landing_footer_text_settings' => ['translate' => 1],
+    ];
+    return $wpml_config;
+});
+
+
+// add_action('wp_footer', 'check_wp_cron_jobs');
+
+// function check_wp_cron_jobs() {
+//     if (is_user_logged_in()) {
+//         $cron_jobs = _get_cron_array();
+//         echo '<pre>';
+//         print_r($cron_jobs);
+//         echo '</pre>';
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

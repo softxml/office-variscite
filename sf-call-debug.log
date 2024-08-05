@@ -6455,3 +6455,3691 @@ Array
 
 {"totalSize":0,"done":true,"records":[]}
 
+-----2024-08-01 07:55:05-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test99
+    [LastName] => test99
+    [Company] => test99
+    [Email] => test99@test99.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test99
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nce0nMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test99
+    [LastName] => test99
+    [Company] => test99
+    [Email] => test99@test99.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test99
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:11-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test88
+    [LastName] => test88
+    [Company] => test88
+    [Email] => test88@test88.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test88
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nce41MAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test88
+    [LastName] => test88
+    [Company] => test88
+    [Email] => test88@test88.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test88
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:16-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test6
+    [LastName] => test6
+    [Company] => test6
+    [Email] => test6@test6.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test6
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nce5dMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test6
+    [LastName] => test6
+    [Company] => test6
+    [Email] => test6@test6.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test6
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:20-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => new lp
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nce7FMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => new lp
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/nxp-i-mx-8/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:24-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => 123456789
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 3232323
+    [Note__c] => 
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/de/landing-pages/bestofmx/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceATMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => 123456789
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 3232323
+    [Note__c] => 
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/de/landing-pages/bestofmx/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:29-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/latest/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcDLaMAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [System__c] => 
+    [Projected_Quantities__c] => 
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/landing-pages/latest/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:33-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => Teat
+    [Company] => Trs
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Plus
+    [Projected_Quantities__c] => 3000-5000
+    [Product_page__c] => DART-MX8M-PLUS
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-plus-nxp-i-mx-8m-plus/#documentation
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceFJMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => Teat
+    [Company] => Trs
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Plus
+    [Projected_Quantities__c] => 3000-5000
+    [Product_page__c] => DART-MX8M-PLUS
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-plus-nxp-i-mx-8m-plus/#documentation
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:37-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => TEST
+    [LastName] => avihu
+    [Company] => A
+    [Email] => A@A.COM
+    [Country] => Chile
+    [Phone] => 1
+    [Note__c] => RE: בדיקות לביצוע החלפת DNS
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-26T08:01:10Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceLlMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => TEST
+    [LastName] => avihu
+    [Company] => A
+    [Email] => A@A.COM
+    [Country] => Chile
+    [Phone] => 1
+    [Note__c] => RE: בדיקות לביצוע החלפת DNS
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-26T08:01:10Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:41-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => TEST
+    [LastName] => avihu
+    [Company] => A
+    [Email] => avihu.h@variscite.com
+    [Country] => Austria
+    [Phone] => 1
+    [Note__c] => RE: בדיקות לביצוע החלפת DNS
+    [System__c] => i.MX 7
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-27T08:43:04Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceQbMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => TEST
+    [LastName] => avihu
+    [Company] => A
+    [Email] => avihu.h@variscite.com
+    [Country] => Austria
+    [Phone] => 1
+    [Note__c] => RE: בדיקות לביצוע החלפת DNS
+    [System__c] => i.MX 7
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-27T08:43:04Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:45-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => lena.g@variscite.com
+    [Country] => Antarctica
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Plus;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => DART-MX8M-PLUS
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-plus-nxp-i-mx-8m-plus/#accessories
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceSDMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => lena.g@variscite.com
+    [Country] => Antarctica
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Plus;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => DART-MX8M-PLUS
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-plus-nxp-i-mx-8m-plus/#accessories
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:49-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:45:46Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceX3MAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:45:46Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:52-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123455678
+    [Note__c] => test
+    [Processor__c] => i.MX 8M Plus;i.MX 6UL 6ULL;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:41:33Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcKyBMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123455678
+    [Note__c] => test
+    [Processor__c] => i.MX 8M Plus;i.MX 6UL 6ULL;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:41:33Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:55:56-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceYfMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:00-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data55
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Mini
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M-MINI
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://unified.cloudways.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-mini-nxp-i-mx8m-mini/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcVdSMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data55
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Mini
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M-MINI
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://unified.cloudways.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-mini-nxp-i-mx8m-mini/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:04-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:04-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123455678
+    [Note__c] => test
+    [Processor__c] => i.MX 8M Plus;i.MX 6UL 6ULL;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:41:33Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcJytMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123455678
+    [Note__c] => test
+    [Processor__c] => i.MX 8M Plus;i.MX 6UL 6ULL;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:41:33Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceaHMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:05-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:06-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123455678
+    [Note__c] => test
+    [Processor__c] => i.MX 8M Plus;i.MX 6UL 6ULL;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:41:33Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcebtMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:06-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data55
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Mini
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M-MINI
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://unified.cloudways.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-mini-nxp-i-mx8m-mini/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcYzWMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123455678
+    [Note__c] => test
+    [Processor__c] => i.MX 8M Plus;i.MX 6UL 6ULL;i.MX 6
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX6
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a9/var-som-mx6-cpu-freescale-imx6/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-23T07:41:33Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:07-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcedVMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data55
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Mini
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M-MINI
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://unified.cloudways.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-mini-nxp-i-mx8m-mini/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:07-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcdhSMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:07-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data55
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Mini
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M-MINI
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://unified.cloudways.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-mini-nxp-i-mx8m-mini/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:08-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data7
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8X;i.MX 8M
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcdhTMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:08-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data7
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8X;i.MX 8M
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncef7MAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data55
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8M Mini
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M-MINI
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://unified.cloudways.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-mini-nxp-i-mx8m-mini/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:09-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcegjMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data7
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8X;i.MX 8M
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcTOgMAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => test
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 123456789
+    [Note__c] => test
+    [Processor__c] => AM625x;i.MX 8M Nano;i.MX 8X
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => VAR-SOM-MX91
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx91-nxp-i-mx91/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-18T13:19:36Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcIgEMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data7
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8X;i.MX 8M
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:12-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data5
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8M
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:12-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data7
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8X;i.MX 8M
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:12-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data5
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8M
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nc8qZMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data7
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 8X;i.MX 8M
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcYD8MAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data5
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8M
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcOP6MAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data5
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8M
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:16-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data5
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8M
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:17-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 09988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=3
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:48:59Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:17-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 09988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=3
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:48:59Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcQEqMAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data5
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8M
+    [Projected_Quantities__c] => 1000-3000
+    [Product_page__c] => DART-MX8M
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => https://tagassistant.google.com/
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a53-krait/dart-mx8m-nxp-imx-8m/#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcHvTMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 09988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=3
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:48:59Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcQLIMA3","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 09988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=3
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:48:59Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:20-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 09988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=3
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:48:59Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:21-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=2
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:47:03Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:21-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=2
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:47:03Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcenBMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 09988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=3
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:48:59Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcbhHMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=2
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:47:03Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceqPMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=2
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:47:03Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:24-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=2
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:47:03Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:26-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => India
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=1
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:34:23Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:26-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => India
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=1
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:34:23Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nces1MAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => Austria
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=2
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:47:03Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcRTAMA3","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => India
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=1
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:34:23Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceNOMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => India
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=1
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:34:23Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:29-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => India
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=1
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:34:23Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcewrMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Demo
+    [LastName] => Demo
+    [Company] => Demo Org
+    [Email] => demo@demo.com
+    [Country] => India
+    [Phone] => 9988776655
+    [Note__c] => test
+    [Processor__c] => i.MX 93
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-MX93
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a55/var-som-mx93-nxp-i-mx-93/?v=1
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-10T10:34:23Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:30-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Gregory
+    [LastName] => Movsesyan
+    [Company] => test
+    [Email] => softxmlisr@gmail.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-09T07:56:10Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:31-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Gregory
+    [LastName] => Movsesyan
+    [Company] => test
+    [Email] => softxmlisr@gmail.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-09T07:56:10Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NceyTMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Gregory
+    [LastName] => Movsesyan
+    [Company] => test
+    [Email] => softxmlisr@gmail.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-09T07:56:10Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncf05MAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Gregory
+    [LastName] => Movsesyan
+    [Company] => test
+    [Email] => softxmlisr@gmail.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-09T07:56:10Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:33-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Gregory
+    [LastName] => Movsesyan
+    [Company] => test
+    [Email] => softxmlisr@gmail.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-09T07:56:10Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncf1hMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Gregory
+    [LastName] => Movsesyan
+    [Company] => test
+    [Email] => softxmlisr@gmail.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-09T07:56:10Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:34-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => i.MX 8M Plus;i.MX 8M Nano
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:35-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => i.MX 8M Plus;i.MX 8M Nano
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncf3JMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => i.MX 8M Plus;i.MX 8M Nano
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcBhzMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => i.MX 8M Plus;i.MX 8M Nano
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:37-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => i.MX 8M Plus;i.MX 8M Nano
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcYGNMA3","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => i.MX 8M Plus;i.MX 8M Nano
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:38-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => AM625x;i.MX 8M Plus
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:39-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => AM625x;i.MX 8M Plus
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NaCocMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => AM625x;i.MX 8M Plus
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NccxIMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => AM625x;i.MX 8M Plus
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:41-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => AM625x;i.MX 8M Plus
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcMruMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data2
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => 
+    [System__c] => AM625x;i.MX 8M Plus
+    [Projected_Quantities__c] => 100-500
+    [Product_page__c] => 
+    [LeadSource] => Contact us Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/contact-us/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:42-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8X
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/?gtm_debug=1717930969944#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:43-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8X
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/?gtm_debug=1717930969944#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncf6XMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8X
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/?gtm_debug=1717930969944#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncf89MAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8X
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/?gtm_debug=1717930969944#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:45-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => data
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8X
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/?gtm_debug=1717930969944#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcGwAMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => data
+    [Company] => Variscite Ltd
+    [Email] => lena.gofman@gmail.com
+    [Country] => Israel
+    [Phone] => 0549327317
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL;i.MX 8X
+    [Projected_Quantities__c] => 500-1000
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/?gtm_debug=1717930969944#get-a-quote
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:47-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T14:10:22Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:47-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T14:10:22Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcXH4MAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T14:10:22Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfBNMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T14:10:22Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:49-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T14:10:22Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:50-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:33:45Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfCzMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T14:10:22Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:51-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:33:45Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:51-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:33:45Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfEbMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:33:45Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcRCWMA3","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:33:45Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfGDMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:33:45Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:54-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:54-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:54-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcCvmMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfJRMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfHpMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:56:58-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:58-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:56:58-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcI0MMAV","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000Nc6dUMAR","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfMfMAJ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:57:00-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfOHMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => test
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:23:57Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:57:01-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:57:01-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcWfyMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => Test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testing
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:21:09Z
+)
+
+Initiator: Cron
+-----2024-08-01 07:57:02-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:57:02-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+-----2024-08-01 07:57:02-----
+Function call_sfdc_api initiated
+URL: https://d24000000i9kceak.my.salesforce.com/services/data/v56.0/sobjects/Lead/
+Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Method: POST
+Initiator: Cron
+Access token is available
+HTTP Status Code: 201
+Response: {"id":"00QP400000Ncf9mMAB","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcAVmMAN","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcfRVMAZ","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Initiator: Cron
+HTTP Status Code: 201
+Response: {"id":"00QP400000NcDjmMAF","success":true,"errors":[]}
+Request Data: Array
+(
+    [FirstName] => test
+    [LastName] => test
+    [Company] => GM
+    [Email] => test@test.com
+    [Country] => Israel
+    [Phone] => 0545509344
+    [Note__c] => testi9ng
+    [Processor__c] => i.MX 6UL 6ULL
+    [Projected_Quantities__c] => 1-100
+    [Product_page__c] => VAR-SOM-6UL
+    [LeadSource] => Web
+    [Campaign_medium__c] => N/A
+    [Campaign_source__c] => direct
+    [Campaign_content__c] => N/A
+    [Campaign_term__c] => N/A
+    [Page_url__c] => https://office.variscite.co.uk/product/system-on-module-som/cortex-a7/var-som-6ul-nxp-imx6ul-6ull-6ulz/
+    [Paid_Campaign_Name__c] => N/A
+    [GA_id__c] => 
+    [Privacy_Policy__c] => 2024-06-05T13:17:43Z
+)
+
+Initiator: Cron

@@ -80,10 +80,23 @@ class newsletterSFDCIntegration{
 		return false;
 	}
 	
-	public function call_sfdc_api( $url, $data, $method = 'POST', $initiator = '' ){
-		if( !empty( $this->access_token ) ){
+	public function call_sfdc_api($url, $data, $method = 'POST', $initiator = '') {
+		$log_file = ABSPATH . "sf-call-debug.log";
+		$f = fopen($log_file, "a+");
+		fwrite($f, '-----' . date('Y-m-d H:i:s') . '-----' . PHP_EOL);
+	
+		// Log initial function call
+		fwrite($f, 'Function call_sfdc_api initiated' . PHP_EOL);
+		fwrite($f, 'URL: ' . $url . PHP_EOL);
+		fwrite($f, 'Data: ' . print_r($data, true) . PHP_EOL);
+		fwrite($f, 'Method: ' . $method . PHP_EOL);
+		fwrite($f, 'Initiator: ' . $initiator . PHP_EOL);
+	
+		if (!empty($this->access_token)) {
+			fwrite($f, 'Access token is available' . PHP_EOL);
+			
 			$curl = curl_init();
-			curl_setopt_array( $curl, array(
+			curl_setopt_array($curl, array(
 				CURLOPT_URL => $url,
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING => '',
@@ -92,72 +105,58 @@ class newsletterSFDCIntegration{
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 				CURLOPT_CUSTOMREQUEST => $method,
-				CURLOPT_POSTFIELDS => json_encode( $data ),
+				CURLOPT_POSTFIELDS => json_encode($data),
 				CURLOPT_HTTPHEADER => array(
-					'Authorization: Bearer '.$this->access_token,
+					'Authorization: Bearer ' . $this->access_token,
 					'Content-Type: application/json',
 				),
 			));
-			$apiResponse = curl_exec( $curl );
-			curl_close( $curl );
-		}else{
-			$apiResponse = $this->access_token;
-		}
-		
-		/* if( !isset( $apiResponse->success ) ){
-			if( empty( $this->access_token ) ){
-				$this->access_token = $this->generate_access_token();
+			$apiResponse = curl_exec($curl);
+	
+			// Check for cURL errors
+			if (curl_errno($curl)) {
+				$error_msg = curl_error($curl);
+				fwrite($f, 'cURL Error: ' . $error_msg . PHP_EOL);
+			} else {
+				// Log the HTTP status code
+				$http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+				fwrite($f, 'HTTP Status Code: ' . $http_status . PHP_EOL);
+				fwrite($f, 'Response: ' . print_r($apiResponse, true) . PHP_EOL);
 			}
-			$curl = curl_init();
-			curl_setopt_array( $curl, array(
-				CURLOPT_URL => $url,
-				CURLOPT_RETURNTRANSFER => true,
-				CURLOPT_ENCODING => '',
-				CURLOPT_MAXREDIRS => 10,
-				CURLOPT_TIMEOUT => 0,
-				CURLOPT_FOLLOWLOCATION => true,
-				CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-				CURLOPT_CUSTOMREQUEST => $method,
-				CURLOPT_POSTFIELDS => json_encode( $data ),
-				CURLOPT_HTTPHEADER => array(
-					'Authorization: Bearer '.$this->access_token,
-					'Content-Type: application/json',
-				),
-			));
-			$apiResponse = curl_exec( $curl );
-			curl_close( $curl );
-		} */
-		
-		if( isset( $data['leadSource'] ) && $data['leadSource'] == "Woocommerce" ){
+			curl_close($curl);
+		} else {
+			$apiResponse = $this->access_token;
+			fwrite($f, 'Access token is not available' . PHP_EOL);
+		}
+	
+		// Determine the initiator of the request
+		if (isset($data['leadSource']) && $data['leadSource'] == "Woocommerce") {
 			$initiator = 'Woo order place';
-		}else if( isset( $data['Payment_approval__c'] ) ){
+		} else if (isset($data['Payment_approval__c'])) {
 			$initiator = 'Woo order payment update';
-		}else if( $initiator == "Cron" ){
+		} else if ($initiator == "Cron") {
 			$initiator = 'Cron';
-		}else if( isset( $data['Privacy_Policy__c'] ) ){
+		} else if (isset($data['Privacy_Policy__c'])) {
 			$initiator = 'privacy policy update';
-		}else if( is_user_logged_in() ){
-			$user_info = get_userdata( get_current_user_id() );
-			$initiator = $user_info->first_name.' '.$user_info->last_name;
-		}else{
+		} else if (is_user_logged_in()) {
+			$user_info = get_userdata(get_current_user_id());
+			$initiator = $user_info->first_name . ' ' . $user_info->last_name;
+		} else {
 			$initiator = 'Cron';
 		}
-		
-		$f = fopen( ABSPATH."sf-call-debug.log", "a+" );
-		fwrite( $f, '-----'.date( 'Y-m-d H:i:s' ).'-----' );
-		fwrite( $f, PHP_EOL );
-		fwrite( $f, 'Initiator - '.$initiator );
-		fwrite( $f, PHP_EOL );
-		fwrite( $f, print_r( $data, true ) );
-		fwrite( $f, PHP_EOL );
-		fwrite( $f, print_r( $apiResponse, true ) );
-		fwrite( $f, PHP_EOL );
-		fwrite( $f, PHP_EOL );
-		fclose( $f );
-		
-		$apiResponse = json_decode( $apiResponse );
+	
+		// Log request details and initiator
+		fwrite($f, 'Request Data: ' . print_r($data, true) . PHP_EOL);
+		fwrite($f, 'Initiator: ' . $initiator . PHP_EOL);
+	
+		// Close log file
+		fclose($f);
+	
+		// Decode and return the API response
+		$apiResponse = json_decode($apiResponse);
 		return $apiResponse;
 	}
+	
 	
 	public function subscribe_to_newsletter( $data, $post_id = 0 ){
 		if( $post_id ){
